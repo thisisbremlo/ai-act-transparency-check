@@ -150,6 +150,10 @@ export const translations = {
     officialGuidelines: "Transparency guidelines",
     officialCode: "Code of Practice",
     officialSourceNote: "These links point only to official EU institutional sources. This tool offers general information, not legal advice; the regulation itself is the binding source.",
+    legalNotice: "Legal Notice",
+    privacyPolicy: "Privacy Policy",
+    disclaimerLink: "Disclaimer",
+    contactOperator: "Contact",
 
     // Search-friendly FAQ
     faqTitle: "EU AI Act Article 50 questions",
@@ -305,6 +309,10 @@ export const translations = {
     officialGuidelines: "Transparenz-Leitlinien",
     officialCode: "Code of Practice",
     officialSourceNote: "Diese Links führen ausschließlich zu offiziellen EU-Institutionen. Dieses Tool bietet allgemeine Informationen und keine Rechtsberatung; verbindlich ist der Verordnungstext.",
+    legalNotice: "Impressum",
+    privacyPolicy: "Datenschutz",
+    disclaimerLink: "Haftungshinweis",
+    contactOperator: "Kontakt",
 
     faqTitle: "Fragen zu Artikel 50 des EU AI Act",
     faqIntro: "Eine kompakte Orientierung zu häufigen Fragen. Prüfen Sie die Angaben immer anhand der offiziellen Quellen.",

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -296,6 +297,12 @@ function OfficialSourcesFooter({ t }: { t: typeof translations.en }) {
         </div>
       </div>
       <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">{t.officialSourceNote}</p>
+      <nav className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border pt-5 text-xs text-muted-foreground" aria-label="Legal information">
+        <Link href="/legal" className="transition-colors hover:text-foreground">{t.legalNotice}</Link>
+        <Link href="/privacy" className="transition-colors hover:text-foreground">{t.privacyPolicy}</Link>
+        <Link href="/disclaimer" className="transition-colors hover:text-foreground">{t.disclaimerLink}</Link>
+        <a href="mailto:hi@bremlo.uk" className="transition-colors hover:text-foreground">{t.contactOperator}</a>
+      </nav>
     </footer>
   );
 }

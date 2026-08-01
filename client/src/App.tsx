@@ -6,11 +6,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import DashboardPage from "@/pages/dashboard";
+import LegalPage from "@/pages/legal";
 
 function AppRouter() {
   return (
     <Switch>
       <Route path="/" component={DashboardPage} />
+      <Route path="/legal" component={() => <LegalPage section="legal" />} />
+      <Route path="/privacy" component={() => <LegalPage section="privacy" />} />
+      <Route path="/disclaimer" component={() => <LegalPage section="disclaimer" />} />
       <Route component={NotFound} />
     </Switch>
   );
