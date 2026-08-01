@@ -1,1 +1,16 @@
-bm9kZV9tb2R1bGVzLwpkaXN0Lwoudml0ZS8KCiMgU1FMaXRlIGRhdGFiYXNlIGZpbGVzIOKAlCBuZXZlciBjb21taXQ7IGV4cG9zZXMgZGVtbyBkYXRhIGF0IHJlc3QKZGF0YS5kYgpkYXRhLmRiLXNobQpkYXRhLmRiLXdhbApkYXRhLmRiLWpvdXJuYWwKCi5lbnYKLmVudi4qCiEuZW52LmV4YW1wbGUKCioubG9nCi5EU19TdG9yZQo=
+node_modules/
+dist/
+.vite/
+
+# SQLite database files — never commit; exposes demo data at rest
+data.db
+data.db-shm
+data.db-wal
+data.db-journal
+
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store

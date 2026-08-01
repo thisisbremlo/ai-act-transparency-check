@@ -72,13 +72,17 @@ npm run build
 npm run start
 ```
 
-The build compiles the Vite client to `dist/public/` and bundles the Express server to `dist/index.cjs` (with `NODE_ENV=production` baked in). `npm run start` runs the bundled server, which serves both the API and the static client.
+The build compiles the Vite client into `dist/`, including the production `index.html` and browser assets. `npm run start` serves that static build locally with Vite Preview.
 
-### Deploy
+### Deploy to Vercel
 
-This is a full-stack app: the Express server (`dist/index.cjs`) serves both the API and the static client from `dist/public/`. Deploy the `npm run build` output to any Node.js host (Render, Railway, Fly.io, etc.) and run `npm run start`. A static host (Vercel, Netlify, S3, etc.) alone is not sufficient, since the API and server-side logic run inside the Node server.
+This is a client-side React website and deploys as a normal static Vite site. Vercel should use:
 
-> **Note:** The SQLite database lives in a local `data.db` file that is created at runtime. On hosts with ephemeral filesystems the data is lost on redeploy — use a persistent volume or an external database if you need durable storage.
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+- **Install command:** `npm install`
+
+The repository includes `vercel.json` with the static output and SPA fallback already configured. No server, database, API key, or environment variable is required for the dashboard.
 
 ## Key Dates
 
