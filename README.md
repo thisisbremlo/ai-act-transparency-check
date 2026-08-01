@@ -1,1 +1,124 @@
-IyBBSSBBY3QgVHJhbnNwYXJlbmN5IENoZWNrCgpJbnRlcmFjdGl2ZSBkYXNoYm9hcmQgdGhhdCBoZWxwcyB1c2VycyBkZXRlcm1pbmUgd2hldGhlciB0aGV5IG5lZWQgdG8gbGFiZWwgQUktZ2VuZXJhdGVkIGNvbnRlbnQgdW5kZXIgKipBcnRpY2xlIDUwIG9mIHRoZSBFVSBBSSBBY3QqKiAoUmVndWxhdGlvbiAoRVUpIDIwMjQvMTY4OSkuCgpCdWlsdCB3aXRoIFJlYWN0LCBUeXBlU2NyaXB0LCBUYWlsd2luZCBDU1MsIGFuZCBzaGFkY24vdWkuIEJpbGluZ3VhbCAoRW5nbGlzaC9HZXJtYW4pIHdpdGggYXV0b21hdGljIGJyb3dzZXIgbGFuZ3VhZ2UgZGV0ZWN0aW9uLgoKIyMgRmVhdHVyZXMKCi0gKio1LXN0ZXAgZGVjaXNpb24gd2l6YXJkKiog4oCUIGd1aWRlcyB1c2VycyB0aHJvdWdoIHRoZSBrZXkgY3JpdGVyaWE6CiAgMS4gQ29udGV4dCBvZiB1c2UgKHByaXZhdGUgdnMuIHByb2Zlc3Npb25hbC9wdWJsaWMpCiAgMi4gVXNlciBncm91cCAoaW5kaXZpZHVhbHMsIG1lZGlhLCBhdXRob3JpdGllcywgY29tcGFuaWVzKQogIDMuIENvbnRlbnQgdHlwZSAodGV4dCwgaW1hZ2UsIGF1ZGlvLCB2aWRlbywgZGVlcGZha2UsIGNoYXRib3QpCiAgNC4gUHVibGljIGludGVyZXN0IHJlbGV2YW5jZSAoZm9yIHRleHQgY29udGVudCkKICA1LiBFZGl0b3JpYWwgcmV2aWV3IChmb3IgcHVibGljIGludGVyZXN0IHRleHQpCi0gKipBcnRpY2xlIDUwIGNvbXBsaWFuY2UgbG9naWMqKiBjb3ZlcmluZzoKICAtIEFydC4gNTAoMSkg4oCUIEFJIGludGVyYWN0aW9uIGRpc2Nsb3N1cmUgKGNoYXRib3RzKQogIC0gQXJ0LiA1MCgyKSDigJQgTWFjaGluZS1yZWFkYWJsZSBtYXJraW5nIChwcm92aWRlciBvYmxpZ2F0aW9uKQogIC0gQXJ0LiA1MCg0KSDigJQgRGVlcGZha2UgbGFiZWxpbmcKICAtIEFydC4gNTAoNCkg4oCUIEFJLWdlbmVyYXRlZCB0ZXh0IG9uIHB1YmxpYyBpbnRlcmVzdCBtYXR0ZXJzCiAgLSBFZGl0b3JpYWwgcmV2aWV3IGV4ZW1wdGlvbiB3aXRoIGZhY3QtY2hlY2tpbmcgcmVxdWlyZW1lbnQKLSAqKlVzZXIgZ3JvdXAgbWF0cml4Kiogc2hvd2luZyB0ZWNobmljYWwgbWFya2luZyBhbmQgdmlzaWJsZSBsYWJlbGluZyByZXF1aXJlbWVudHMgZm9yIGVhY2ggZ3JvdXAKLSAqKkJpbGluZ3VhbCoqIOKAlCBFbmdsaXNoIGFuZCBHZXJtYW4sIGF1dG8tZGV0ZWN0ZWQgZnJvbSBicm93c2VyIGxhbmd1YWdlIHdpdGggbWFudWFsIHRvZ2dsZQotICoqRGFyayBtb2RlKiogd2l0aCBzeXN0ZW0gcHJlZmVyZW5jZSBkZXRlY3Rpb24KLSAqKkZ1bGx5IHJlc3BvbnNpdmUqKiDigJQgZGVza3RvcCwgdGFibGV0LCBhbmQgbW9iaWxlCi0gKipBY2Nlc3NpYmxlKiog4oCUIHNlbWFudGljIEhUTUwsIGtleWJvYXJkIG5hdmlnYXRpb24sIEFSSUEgbGFiZWxzCgojIyBMZWdhbCBCYXNpcwoKLSBbQXJ0aWNsZSA1MCwgRVUgQUkgQWN0XShodHRwczovL2FpLWFjdC1zZXJ2aWNlLWRlc2suZWMuZXVyb3BhLmV1L2VuL2FpLWFjdC9hcnRpY2xlLTUwKQotIFtFVSBDb21taXNzaW9uIEd1aWRlbGluZXMgb24gVHJhbnNwYXJlbmN5IE9ibGlnYXRpb25zXShodHRwczovL2RpZ2l0YWwtc3RyYXRlZ3kuZWMuZXVyb3BhLmV1L2VuL2xpYnJhcnkvZ3VpZGVsaW5lcy10cmFuc3BhcmVuY3ktb2JsaWdhdGlvbnMtcHJvdmlkZXJzLWFuZC1kZXBsb3llcnMtYWktc3lzdGVtcykgKEp1bHkgMjAsIDIwMjYpCi0gW0NvZGUgb2YgUHJhY3RpY2Ugb24gVHJhbnNwYXJlbmN5IG9mIEFJLUdlbmVyYXRlZCBDb250ZW50XShodHRwczovL2RpZ2l0YWwtc3RyYXRlZ3kuZWMuZXVyb3BhLmV1L2VuL3BvbGljaWVzL2NvZGUtcHJhY3RpY2UtYWktZ2VuZXJhdGVkLWNvbnRlbnQpIChKdW5lIDEwLCAyMDI2KQoKKipEaXNjbGFpbWVyOioqIFRoaXMgZGFzaGJvYXJkIHByb3ZpZGVzIGluaXRpYWwgZ3VpZGFuY2UgYW5kIGRvZXMgbm90IGNvbnN0aXR1dGUgbGVnYWwgYWR2aWNlLiBGb3IgYSBiaW5kaW5nIGFzc2Vzc21lbnQsIGNvbnN1bHQgYSBxdWFsaWZpZWQgbGVnYWwgcHJvZmVzc2lvbmFsLiBUaGUgZ3VpZGVsaW5lcyBhcmUgbGVnYWxseSBub24tYmluZGluZzsgb25seSB0aGUgb2JsaWdhdGlvbnMgdW5kZXIgdGhlIEFJIEFjdCBhcmUgYmluZGluZy4gVGhlIENvdXJ0IG9mIEp1c3RpY2Ugb2YgdGhlIEV1cm9wZWFuIFVuaW9uIChDSkVVKSBwcm92aWRlcyB0aGUgdWx0aW1hdGVseSBhdXRob3JpdGF0aXZlIGludGVycHJldGF0aW9uLgoKIyMgVGVjaCBTdGFjawoKfCBMYXllciAgICAgICB8IFRlY2hub2xvZ3kgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8CnwgLS0tLS0tLS0tLS0gfCAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gfAp8IEZyb250ZW5kICAgIHwgUmVhY3QgMTksIFR5cGVTY3JpcHQsIFZpdGUgICAgICAgICAgICAgICAgICAgfAp8IFN0eWxpbmcgICAgIHwgVGFpbHdpbmQgQ1NTIHYzLCBzaGFkY24vdWkgICAgICAgICAgICAgICAgICAgIHwKfCBCYWNrZW5kICAgICB8IEV4cHJlc3MuanMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8CnwgRGF0YWJhc2UgICAgfCBTUUxpdGUgKERyaXp6bGUgT1JNKSAgICAgICAgICAgICAgICAgICAgICAgICAgfAp8IEZvbnRzICAgICAgIHwgU2F0b3NoaSArIENhYmluZXQgR3JvdGVzayAoRm9udHNoYXJlKSAgICAgICAgICB8CgojIyBHZXR0aW5nIFN0YXJ0ZWQKCiMjIyBQcmVyZXF1aXNpdGVzCgotIE5vZGUuanMgMTgrCi0gbnBtIG9yIHBucG0KCiMjIyBJbnN0YWxsYXRpb24KCmBgYGJhc2gKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS90aGlzaXNicmVtbG8vYWktYWN0LXRyYW5zcGFyZW5jeS1jaGVjay5naXQKY2QgYWktYWN0LXRyYW5zcGFyZW5jeS1jaGVjawpucG0gaW5zdGFsbApgYGAKCiMjIyBEZXZlbG9wbWVudAoKYGBgYmFzaApucG0gcnVuIGRldgpgYGAKClRoZSBkZXYgc2VydmVyIHN0YXJ0cyBvbiBgaHR0cDovL2xvY2FsaG9zdDo1MDAwYC4KCiMjIyBQcm9kdWN0aW9uIEJ1aWxkCgpgYGBiYXNoCm5wbSBydW4gYnVpbGQKbm9kZSBkaXN0L2luZGV4LmNqcwpgYGAKCiMjIyBEZXBsb3kKClRoZSBidWlsZCBvdXRwdXQgaW4gYGRpc3QvcHVibGljL2AgaXMgYSBzdGF0aWMgYnVuZGxlIHRoYXQgY2FuIGJlIGRlcGxveWVkIHRvIGFueSBzdGF0aWMgaG9zdCAoVmVyY2VsLCBOZXRsaWZ5LCBTMywgZXRjLikuCgojIyBLZXkgRGF0ZXMKCnwgRGF0ZSAgICAgICAgICAgICAgICB8IE1pbGVzdG9uZSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8CnwgLS0tLS0tLS0tLS0tLS0tLS0tLSB8IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB8CnwgQXVndXN0IDIsIDIwMjYgICAgICB8IFRyYW5zcGFyZW5jeSBvYmxpZ2F0aW9ucyB1bmRlciBBcnQuIDUwIEFJIEFjdCB0YWtlIGVmZmVjdCAgICAgICAgICAgICAgICAgfAp8IERlY2VtYmVyIDIsIDIwMjYgICAgfCBUcmFuc2l0aW9uIHBlcmlvZCBmb3Igc3lzdGVtcyBhbHJlYWR5IG9uIHRoZSBtYXJrZXQgYmVmb3JlIEF1ZyAyLCAyMDI2ICAgfAoKIyMgUHJvamVjdCBTdHJ1Y3R1cmUKCmBgYAphaS1hY3QtdHJhbnNwYXJlbmN5LWNoZWNrLwrilJzilIDilIAgY2xpZW50LyAgICAgICAgICAgICAgICAgICMgRnJvbnRlbmQK4pSCICAg4pSc4pSA4pSAIHNyYy8K4pSCICAg4pSCICAg4pSc4pSA4pSAIHBhZ2VzLyAgICAgICAgICAgIyBQYWdlIGNvbXBvbmVudHMgKGRhc2hib2FyZC50c3gpCuKUgiAgIOKUgiAgIOKUnOKUgOKUgCBjb21wb25lbnRzL3VpLyAgICMgc2hhZGNuL3VpIGNvbXBvbmVudHMK4pSCICAg4pSCICAg4pSc4pSA4pSAIGhvb2tzLyAgICAgICAgICAgIyBDdXN0b20gaG9va3MK4pSCICAg4pSCICAg4pSc4pSA4pSAIGxpYi8gICAgICAgICAgICAgIyBVdGlsaXRpZXMgYW5kIHF1ZXJ5IGNsaWVudArilIIgICDilIIgICDilJzilIDilIAgaTE4bi50cyAgICAgICAgICAjIFRyYW5zbGF0aW9ucyAoRU4vREUpICsgbGFuZ3VhZ2UgZGV0ZWN0aW9uCuKUgiAgIOKUgiAgIOKUnOKUgOKUgCBBcHAudHN4ICAgICAgICAgICMgUm9vdCBhcHAgd2l0aCByb3V0aW5nCuKUgiAgIOKUgiAgIOKUnOKUgOKUgCBtYWluLnRzeCAgICAgICAgICMgRW50cnkgcG9pbnQK4pSCICAg4pSCICAg4pSU4pSA4pSAIGluZGV4LmNzcyAgICAgICAgIyBHbG9iYWwgc3R5bGVzICsgdGhlbWUgdG9rZW5zCuKUgiAgIOKUlOKUgOKUgCBpbmRleC5odG1sICAgICAgICAgICAjIEhUTUwgdGVtcGxhdGUK4pSc4pSA4pSAIHNlcnZlci8gICAgICAgICAgICAgICAgICAjIEJhY2tlbmQK4pSCICAg4pSc4pSA4pSAIGluZGV4LnRzICAgICAgICAgICAgICMgRXhwcmVzcyBzZXJ2ZXIgc2V0dXAK4pSCICAg4pSc4pSA4pSAIHJvdXRlcy50cyAgICAgICAgICAgICMgQVBJIHJvdXRlcwrilIIgICDilJzilIDilIAgc3RvcmFnZS50cyAgICAgICAgICAgIyBTdG9yYWdlIGludGVyZmFjZQrilIIgICDilJzilIDilIAgc3RhdGljLnRzICAgICAgICAgICAgIyBTdGF0aWMgZmlsZSBzZXJ2aW5nCuKUgiAgIOKUlOKUgOKUgCB2aXRlLnRzICAgICAgICAgICAgICAjIFZpdGUgbWlkZGxld2FyZQrilJzilIDilIAgc2hhcmVkLyAgICAgICAgICAgICAgICAgICMgU2hhcmVkIHR5cGVzL3NjaGVtYQrilJzilIDilIAgc2NyaXB0LyAgICAgICAgICAgICAgICAgICMgQnVpbGQgc2NyaXB0cwrilJzilIDilIAgcGFja2FnZS5qc29uCuKUnOKUgOKUgCB2aXRlLmNvbmZpZy50cwrilJzilIDilIAgdGFpbHdpbmQuY29uZmlnLnRzCuKUlOKUgOKUgCB0c2NvbmZpZy5qc29uCmBgYAoKIyMgTGljZW5zZQoKTUlUCg==
+# AI Act Transparency Check
+
+Interactive dashboard that helps users determine whether they need to label AI-generated content under **Article 50 of the EU AI Act** (Regulation (EU) 2024/1689).
+
+Built with React, TypeScript, Tailwind CSS, and shadcn/ui. Bilingual (English/German) with automatic browser language detection.
+
+## Features
+
+- **5-step decision wizard** — guides users through the key criteria:
+  1. Context of use (private vs. professional/public)
+  2. User group (individuals, media, authorities, companies)
+  3. Content type (text, image, audio, video, deepfake, chatbot)
+  4. Public interest relevance (for text content)
+  5. Editorial review (for public interest text)
+- **Article 50 compliance logic** covering:
+  - Art. 50(1) — AI interaction disclosure (chatbots)
+  - Art. 50(2) — Machine-readable marking (provider obligation)
+  - Art. 50(4) — Deepfake labeling
+  - Art. 50(4) — AI-generated text on public interest matters
+  - Editorial review exemption with fact-checking requirement
+- **User group matrix** showing technical marking and visible labeling requirements for each group
+- **Bilingual** — English and German, auto-detected from browser language with manual toggle
+- **Dark mode** with system preference detection
+- **Fully responsive** — desktop, tablet, and mobile
+- **Accessible** — semantic HTML, keyboard navigation, ARIA labels
+
+## Legal Basis
+
+- [Article 50, EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50)
+- [EU Commission Guidelines on Transparency Obligations](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems) (July 20, 2026)
+- [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) (June 10, 2026)
+
+**Disclaimer:** This dashboard provides initial guidance and does not constitute legal advice. For a binding assessment, consult a qualified legal professional. The guidelines are legally non-binding; only the obligations under the AI Act are binding. The Court of Justice of the European Union (CJEU) provides the ultimately authoritative interpretation.
+
+## Tech Stack
+
+| Layer       | Technology                                    |
+| ----------- | --------------------------------------------- |
+| Frontend    | React 18, TypeScript, Vite                    |
+| Styling     | Tailwind CSS v3, shadcn/ui                    |
+| Backend     | Express.js                                    |
+| Database    | SQLite (Drizzle ORM)                          |
+| Fonts       | Satoshi + Cabinet Grotesk (Fontshare)         |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20.19+ (or 22.12+)
+- npm (or pnpm)
+
+### Installation
+
+```bash
+git clone https://github.com/thisisbremlo/ai-act-transparency-check.git
+cd ai-act-transparency-check
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+The dev server starts on `http://localhost:5000` (override with the `PORT` environment variable).
+
+### Production Build
+
+```bash
+npm run build
+npm run start
+```
+
+The build compiles the Vite client to `dist/public/` and bundles the Express server to `dist/index.cjs` (with `NODE_ENV=production` baked in). `npm run start` runs the bundled server, which serves both the API and the static client.
+
+### Deploy
+
+This is a full-stack app: the Express server (`dist/index.cjs`) serves both the API and the static client from `dist/public/`. Deploy the `npm run build` output to any Node.js host (Render, Railway, Fly.io, etc.) and run `npm run start`. A static host (Vercel, Netlify, S3, etc.) alone is not sufficient, since the API and server-side logic run inside the Node server.
+
+> **Note:** The SQLite database lives in a local `data.db` file that is created at runtime. On hosts with ephemeral filesystems the data is lost on redeploy — use a persistent volume or an external database if you need durable storage.
+
+## Key Dates
+
+| Date                | Milestone                                                                |
+| ------------------- | ------------------------------------------------------------------------ |
+| August 2, 2026      | Transparency obligations under Art. 50 AI Act take effect                 |
+| December 2, 2026    | Transition period for systems already on the market before Aug 2, 2026   |
+
+## Project Structure
+
+```
+ai-act-transparency-check/
+├── client/                  # Frontend
+│   ├── src/
+│   │   ├── pages/           # Page components (dashboard.tsx, not-found.tsx)
+│   │   ├── components/ui/   # shadcn/ui components
+│   │   ├── hooks/           # Custom hooks
+│   │   ├── lib/             # Utilities and query client
+│   │   ├── i18n.ts          # Translations (EN/DE) + language detection
+│   │   ├── App.tsx          # Root app with routing
+│   │   ├── main.tsx         # Entry point
+│   │   └── index.css        # Global styles + theme tokens
+│   └── index.html           # HTML template
+├── server/                  # Backend
+│   ├── index.ts             # Express server setup
+│   ├── routes.ts            # API routes
+│   ├── storage.ts           # Storage interface
+│   ├── static.ts            # Static file serving
+│   └── vite.ts              # Vite middleware
+├── shared/                  # Shared types/schema
+├── script/                  # Build scripts
+├── package.json
+├── vite.config.ts
+├── tailwind.config.ts
+├── postcss.config.js
+├── drizzle.config.ts
+├── components.json
+└── tsconfig.json
+```
+
+## License
+
+MIT

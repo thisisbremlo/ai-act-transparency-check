@@ -1,1 +1,15 @@
-aW1wb3J0IHR5cGUgeyBFeHByZXNzIH0gZnJvbSAiZXhwcmVzcyI7CmltcG9ydCB7IGNyZWF0ZVNlcnZlciB9IGZyb20gJ25vZGU6aHR0cCc7CmltcG9ydCB0eXBlIHsgU2VydmVyIH0gZnJvbSAnbm9kZTpodHRwJzsKaW1wb3J0IHsgc3RvcmFnZSB9IGZyb20gIi4vc3RvcmFnZSI7CgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gcmVnaXN0ZXJSb3V0ZXMoCiAgaHR0cFNlcnZlcjogU2VydmVyLAogIGFwcDogRXhwcmVzcwopOiBQcm9taXNlPFNlcnZlcj4gewogIC8vIHByZWZpeCBhbGwgcm91dGVzIHdpdGggL2FwaQogIC8vIHVzZSBzdG9yYWdlIHRvIHBlcmZvcm0gQ1JVRCBvcGVyYXRpb25zIG9uIHRoZSBzdG9yYWdlIGludGVyZmFjZQogIC8vIGUuZy4gYXBwLmdldCgiL2FwaS9pdGVtcyIsIGFzeW5jIChfcmVxLCByZXMpID0+IHsgLi4uIH0pCgogIHJldHVybiBodHRwU2VydmVyOwp9Cg==
+import type { Express } from "express";
+import { createServer } from 'node:http';
+import type { Server } from 'node:http';
+import { storage } from "./storage";
+
+export async function registerRoutes(
+  httpServer: Server,
+  app: Express
+): Promise<Server> {
+  // prefix all routes with /api
+  // use storage to perform CRUD operations on the storage interface
+  // e.g. app.get("/api/items", async (_req, res) => { ... })
+
+  return httpServer;
+}

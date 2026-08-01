@@ -1,1 +1,44 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCAqIGFzIFRvZ2dsZVByaW1pdGl2ZSBmcm9tICJAcmFkaXgtdWkvcmVhY3QtdG9nZ2xlIgppbXBvcnQgeyBjdmEgfSBmcm9tICdjbGFzcy12YXJpYW5jZS1hdXRob3JpdHknOwppbXBvcnQgdHlwZSB7IFZhcmlhbnRQcm9wcyB9IGZyb20gJ2NsYXNzLXZhcmlhbmNlLWF1dGhvcml0eSc7CgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKY29uc3QgdG9nZ2xlVmFyaWFudHMgPSBjdmEoCiAgImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLW1kIHRleHQtc20gZm9udC1tZWRpdW0gcmluZy1vZmZzZXQtYmFja2dyb3VuZCB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy1tdXRlZCBob3Zlcjp0ZXh0LW11dGVkLWZvcmVncm91bmQgZm9jdXMtdmlzaWJsZTpvdXRsaW5lLW5vbmUgZm9jdXMtdmlzaWJsZTpyaW5nLTIgZm9jdXMtdmlzaWJsZTpyaW5nLXJpbmcgZm9jdXMtdmlzaWJsZTpyaW5nLW9mZnNldC0yIGRpc2FibGVkOnBvaW50ZXItZXZlbnRzLW5vbmUgZGlzYWJsZWQ6b3BhY2l0eS01MCBkYXRhLVtzdGF0ZT1vbl06YmctYWNjZW50IGRhdGEtW3N0YXRlPW9uXTp0ZXh0LWFjY2VudC1mb3JlZ3JvdW5kIFsmX3N2Z106cG9pbnRlci1ldmVudHMtbm9uZSBbJl9zdmddOnNpemUtNCBbJl9zdmddOnNocmluay0wIGdhcC0yIiwKICB7CiAgICB2YXJpYW50czogewogICAgICB2YXJpYW50OiB7CiAgICAgICAgZGVmYXVsdDogImJnLXRyYW5zcGFyZW50IiwKICAgICAgICBvdXRsaW5lOgogICAgICAgICAgImJvcmRlciBib3JkZXItaW5wdXQgYmctdHJhbnNwYXJlbnQgaG92ZXI6YmctYWNjZW50IGhvdmVyOnRleHQtYWNjZW50LWZvcmVncm91bmQiLAogICAgICB9LAogICAgICBzaXplOiB7CiAgICAgICAgZGVmYXVsdDogImgtMTAgcHgtMyBtaW4tdy0xMCIsCiAgICAgICAgc206ICJoLTkgcHgtMi41IG1pbi13LTkiLAogICAgICAgIGxnOiAiaC0xMSBweC01IG1pbi13LTExIiwKICAgICAgfSwKICAgIH0sCiAgICBkZWZhdWx0VmFyaWFudHM6IHsKICAgICAgdmFyaWFudDogImRlZmF1bHQiLAogICAgICBzaXplOiAiZGVmYXVsdCIsCiAgICB9LAogIH0KKQoKY29uc3QgVG9nZ2xlID0gUmVhY3QuZm9yd2FyZFJlZjwKICBSZWFjdC5FbGVtZW50UmVmPHR5cGVvZiBUb2dnbGVQcmltaXRpdmUuUm9vdD4sCiAgUmVhY3QuQ29tcG9uZW50UHJvcHNXaXRob3V0UmVmPHR5cGVvZiBUb2dnbGVQcmltaXRpdmUuUm9vdD4gJgogICAgVmFyaWFudFByb3BzPHR5cGVvZiB0b2dnbGVWYXJpYW50cz4KPigoeyBjbGFzc05hbWUsIHZhcmlhbnQsIHNpemUsIC4uLnByb3BzIH0sIHJlZikgPT4gKAogIDxUb2dnbGVQcmltaXRpdmUuUm9vdAogICAgcmVmPXtyZWZ9CiAgICBjbGFzc05hbWU9e2NuKHRvZ2dsZVZhcmlhbnRzKHsgdmFyaWFudCwgc2l6ZSwgY2xhc3NOYW1lIH0pKX0KICAgIHsuLi5wcm9wc30KICAvPgopKQoKVG9nZ2xlLmRpc3BsYXlOYW1lID0gVG9nZ2xlUHJpbWl0aXZlLlJvb3QuZGlzcGxheU5hbWUKCmV4cG9ydCB7IFRvZ2dsZSwgdG9nZ2xlVmFyaWFudHMgfQo=
+import * as React from "react"
+import * as TogglePrimitive from "@radix-ui/react-toggle"
+import { cva } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
+
+import { cn } from "@/lib/utils"
+
+const toggleVariants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 gap-2",
+  {
+    variants: {
+      variant: {
+        default: "bg-transparent",
+        outline:
+          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+      },
+      size: {
+        default: "h-10 px-3 min-w-10",
+        sm: "h-9 px-2.5 min-w-9",
+        lg: "h-11 px-5 min-w-11",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+const Toggle = React.forwardRef<
+  React.ElementRef<typeof TogglePrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
+    VariantProps<typeof toggleVariants>
+>(({ className, variant, size, ...props }, ref) => (
+  <TogglePrimitive.Root
+    ref={ref}
+    className={cn(toggleVariants({ variant, size, className }))}
+    {...props}
+  />
+))
+
+Toggle.displayName = TogglePrimitive.Root.displayName
+
+export { Toggle, toggleVariants }

@@ -1,1 +1,56 @@
-aW1wb3J0IHsgUXVlcnlDbGllbnQsIFF1ZXJ5RnVuY3Rpb24gfSBmcm9tICJAdGFuc3RhY2svcmVhY3QtcXVlcnkiOwoKY29uc3QgQVBJX0JBU0UgPSAiX19QT1JUXzUwMDBfXyIuc3RhcnRzV2l0aCgiX18iKSA/ICIiIDogIl9fUE9SVF81MDAwX18iOwoKYXN5bmMgZnVuY3Rpb24gdGhyb3dJZlJlc05vdE9rKHJlczogUmVzcG9uc2UpIHsKICBpZiAoIXJlcy5vaykgewogICAgY29uc3QgdGV4dCA9IChhd2FpdCByZXMudGV4dCgpKSB8fCByZXMuc3RhdHVzVGV4dDsKICAgIHRocm93IG5ldyBFcnJvcihgJHtyZXMuc3RhdHVzfTogJHt0ZXh0fWApOwogIH0KfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGFwaVJlcXVlc3QoCiAgbWV0aG9kOiBzdHJpbmcsCiAgdXJsOiBzdHJpbmcsCiAgZGF0YT86IHVua25vd24gfCB1bmRlZmluZWQsCik6IFByb21pc2U8UmVzcG9uc2U+IHsKICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChgJHtBUElfQkFTRX0ke3VybH1gLCB7CiAgICBtZXRob2QsCiAgICBoZWFkZXJzOiBkYXRhID8geyAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL2pzb24iIH0gOiB7fSwKICAgIGJvZHk6IGRhdGEgPyBKU09OLnN0cmluZ2lmeShkYXRhKSA6IHVuZGVmaW5lZCwKICB9KTsKCiAgYXdhaXQgdGhyb3dJZlJlc05vdE9rKHJlcyk7CiAgcmV0dXJuIHJlczsKfQoKdHlwZSBVbmF1dGhvcml6ZWRCZWhhdmlvciA9ICJyZXR1cm5OdWxsIiB8ICJ0aHJvdyI7CmV4cG9ydCBjb25zdCBnZXRRdWVyeUZuOiA8VD4ob3B0aW9uczogewogIG9uNDAxOiBVbmF1dGhvcml6ZWRCZWhhdmlvcjsKfSkgPT4gUXVlcnlGdW5jdGlvbjxUPiA9CiAgKHsgb240MDE6IHVuYXV0aG9yaXplZEJlaGF2aW9yIH0pID0+CiAgYXN5bmMgKHsgcXVlcnlLZXkgfSkgPT4gewogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYCR7QVBJX0JBU0V9JHtxdWVyeUtleS5qb2luKCIvIil9YCk7CgogICAgaWYgKHVuYXV0aG9yaXplZEJlaGF2aW9yID09PSAicmV0dXJuTnVsbCIgJiYgcmVzLnN0YXR1cyA9PT0gNDAxKSB7CiAgICAgIHJldHVybiBudWxsOwogICAgfQoKICAgIGF3YWl0IHRocm93SWZSZXNOb3RPayhyZXMpOwogICAgcmV0dXJuIGF3YWl0IHJlcy5qc29uKCk7CiAgfTsKCmV4cG9ydCBjb25zdCBxdWVyeUNsaWVudCA9IG5ldyBRdWVyeUNsaWVudCh7CiAgZGVmYXVsdE9wdGlvbnM6IHsKICAgIHF1ZXJpZXM6IHsKICAgICAgcXVlcnlGbjogZ2V0UXVlcnlGbih7IG9uNDAxOiAidGhyb3ciIH0pLAogICAgICByZWZldGNoSW50ZXJ2YWw6IGZhbHNlLAogICAgICByZWZldGNoT25XaW5kb3dGb2N1czogZmFsc2UsCiAgICAgIHN0YWxlVGltZTogSW5maW5pdHksCiAgICAgIHJldHJ5OiBmYWxzZSwKICAgIH0sCiAgICBtdXRhdGlvbnM6IHsKICAgICAgcmV0cnk6IGZhbHNlLAogICAgfSwKICB9LAp9KTsK
+import { QueryClient, QueryFunction } from "@tanstack/react-query";
+
+const API_BASE = "__PORT_5000__".startsWith("__") ? "" : "__PORT_5000__";
+
+async function throwIfResNotOk(res: Response) {
+  if (!res.ok) {
+    const text = (await res.text()) || res.statusText;
+    throw new Error(`${res.status}: ${text}`);
+  }
+}
+
+export async function apiRequest(
+  method: string,
+  url: string,
+  data?: unknown | undefined,
+): Promise<Response> {
+  const res = await fetch(`${API_BASE}${url}`, {
+    method,
+    headers: data ? { "Content-Type": "application/json" } : {},
+    body: data ? JSON.stringify(data) : undefined,
+  });
+
+  await throwIfResNotOk(res);
+  return res;
+}
+
+type UnauthorizedBehavior = "returnNull" | "throw";
+export const getQueryFn: <T>(options: {
+  on401: UnauthorizedBehavior;
+}) => QueryFunction<T> =
+  ({ on401: unauthorizedBehavior }) =>
+  async ({ queryKey }) => {
+    const res = await fetch(`${API_BASE}${queryKey.join("/")}`);
+
+    if (unauthorizedBehavior === "returnNull" && res.status === 401) {
+      return null;
+    }
+
+    await throwIfResNotOk(res);
+    return await res.json();
+  };
+
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      queryFn: getQueryFn({ on401: "throw" }),
+      refetchInterval: false,
+      refetchOnWindowFocus: false,
+      staleTime: Infinity,
+      retry: false,
+    },
+    mutations: {
+      retry: false,
+    },
+  },
+});

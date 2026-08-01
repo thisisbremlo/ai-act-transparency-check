@@ -1,1 +1,58 @@
-aW1wb3J0IHR5cGUgeyBFeHByZXNzIH0gZnJvbSAnZXhwcmVzcyc7CmltcG9ydCB7IGNyZWF0ZVNlcnZlciBhcyBjcmVhdGVWaXRlU2VydmVyLCBjcmVhdGVMb2dnZXIgfSBmcm9tICJ2aXRlIjsKaW1wb3J0IHR5cGUgeyBTZXJ2ZXIgfSBmcm9tICdub2RlOmh0dHAnOwppbXBvcnQgdml0ZUNvbmZpZyBmcm9tICIuLi92aXRlLmNvbmZpZyI7CmltcG9ydCBmcyBmcm9tICJub2RlOmZzIjsKaW1wb3J0IHBhdGggZnJvbSAibm9kZTpwYXRoIjsKaW1wb3J0IHsgbmFub2lkIH0gZnJvbSAibmFub2lkIjsKCmNvbnN0IHZpdGVMb2dnZXIgPSBjcmVhdGVMb2dnZXIoKTsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZXR1cFZpdGUoc2VydmVyOiBTZXJ2ZXIsIGFwcDogRXhwcmVzcykgewogIGNvbnN0IHNlcnZlck9wdGlvbnMgPSB7CiAgICBtaWRkbGV3YXJlTW9kZTogdHJ1ZSwKICAgIGhtcjogeyBzZXJ2ZXIsIHBhdGg6ICIvdml0ZS1obXIiIH0sCiAgICBhbGxvd2VkSG9zdHM6IHRydWUgYXMgY29uc3QsCiAgfTsKCiAgY29uc3Qgdml0ZSA9IGF3YWl0IGNyZWF0ZVZpdGVTZXJ2ZXIoewogICAgLi4udml0ZUNvbmZpZywKICAgIGNvbmZpZ0ZpbGU6IGZhbHNlLAogICAgY3VzdG9tTG9nZ2VyOiB7CiAgICAgIC4uLnZpdGVMb2dnZXIsCiAgICAgIGVycm9yOiAobXNnLCBvcHRpb25zKSA9PiB7CiAgICAgICAgdml0ZUxvZ2dlci5lcnJvcihtc2csIG9wdGlvbnMpOwogICAgICAgIHByb2Nlc3MuZXhpdCgxKTsKICAgICAgfSwKICAgIH0sCiAgICBzZXJ2ZXI6IHNlcnZlck9wdGlvbnMsCiAgICBhcHBUeXBlOiAiY3VzdG9tIiwKICB9KTsKCiAgYXBwLnVzZSh2aXRlLm1pZGRsZXdhcmVzKTsKCiAgYXBwLnVzZSgiL3sqcGF0aH0iLCBhc3luYyAocmVxLCByZXMsIG5leHQpID0+IHsKICAgIGNvbnN0IHVybCA9IHJlcS5vcmlnaW5hbFVybDsKCiAgICB0cnkgewogICAgICBjb25zdCBjbGllbnRUZW1wbGF0ZSA9IHBhdGgucmVzb2x2ZSgKICAgICAgICBpbXBvcnQubWV0YS5kaXJuYW1lLAogICAgICAgICIuLiIsCiAgICAgICAgImNsaWVudCIsCiAgICAgICAgImluZGV4Lmh0bWwiLAogICAgICApOwoKICAgICAgLy8gYWx3YXlzIHJlbG9hZCB0aGUgaW5kZXguaHRtbCBmaWxlIGZyb20gZGlzayBpbmNhc2UgaXQgY2hhbmdlcwogICAgICBsZXQgdGVtcGxhdGUgPSBhd2FpdCBmcy5wcm9taXNlcy5yZWFkRmlsZShjbGllbnRUZW1wbGF0ZSwgInV0Zi04Iik7CiAgICAgIHRlbXBsYXRlID0gdGVtcGxhdGUucmVwbGFjZSgKICAgICAgICBgc3JjPSIvc3JjL21haW4udHN4ImAsCiAgICAgICAgYHNyYz0iL3NyYy9tYWluLnRzeD92PSR7bmFub2lkKCl9ImAsCiAgICAgICk7CiAgICAgIGNvbnN0IHBhZ2UgPSBhd2FpdCB2aXRlLnRyYW5zZm9ybUluZGV4SHRtbCh1cmwsIHRlbXBsYXRlKTsKICAgICAgcmVzLnN0YXR1cygyMDApLnNldCh7ICJDb250ZW50LVR5cGUiOiAidGV4dC9odG1sIiB9KS5lbmQocGFnZSk7CiAgICB9IGNhdGNoIChlKSB7CiAgICAgIHZpdGUuc3NyRml4U3RhY2t0cmFjZShlIGFzIEVycm9yKTsKICAgICAgbmV4dChlKTsKICAgIH0KICB9KTsKfQo=
+import type { Express } from 'express';
+import { createServer as createViteServer, createLogger } from "vite";
+import type { Server } from 'node:http';
+import viteConfig from "../vite.config";
+import fs from "node:fs";
+import path from "node:path";
+import { nanoid } from "nanoid";
+
+const viteLogger = createLogger();
+
+export async function setupVite(server: Server, app: Express) {
+  const serverOptions = {
+    middlewareMode: true,
+    hmr: { server, path: "/vite-hmr" },
+    allowedHosts: true as const,
+  };
+
+  const vite = await createViteServer({
+    ...viteConfig,
+    configFile: false,
+    customLogger: {
+      ...viteLogger,
+      error: (msg, options) => {
+        viteLogger.error(msg, options);
+        process.exit(1);
+      },
+    },
+    server: serverOptions,
+    appType: "custom",
+  });
+
+  app.use(vite.middlewares);
+
+  app.use("/{*path}", async (req, res, next) => {
+    const url = req.originalUrl;
+
+    try {
+      const clientTemplate = path.resolve(
+        import.meta.dirname,
+        "..",
+        "client",
+        "index.html",
+      );
+
+      // always reload the index.html file from disk incase it changes
+      let template = await fs.promises.readFile(clientTemplate, "utf-8");
+      template = template.replace(
+        `src="/src/main.tsx"`,
+        `src="/src/main.tsx?v=${nanoid()}"`,
+      );
+      const page = await vite.transformIndexHtml(url, template);
+      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+    } catch (e) {
+      vite.ssrFixStacktrace(e as Error);
+      next(e);
+    }
+  });
+}

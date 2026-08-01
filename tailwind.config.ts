@@ -1,1 +1,108 @@
-aW1wb3J0IHR5cGUgeyBDb25maWcgfSBmcm9tICJ0YWlsd2luZGNzcyI7CgpleHBvcnQgZGVmYXVsdCB7CiAgZGFya01vZGU6IFsiY2xhc3MiXSwKICBjb250ZW50OiBbIi4vY2xpZW50L2luZGV4Lmh0bWwiLCAiLi9jbGllbnQvc3JjLyoqLyoue2pzLGpzeCx0cyx0c3h9Il0sCiAgdGhlbWU6IHsKICAgIGV4dGVuZDogewogICAgICBib3JkZXJSYWRpdXM6IHsKICAgICAgICBsZzogIi41NjI1cmVtIiwgLyogOXB4ICovCiAgICAgICAgbWQ6ICIuMzc1cmVtIiwgLyogNnB4ICovCiAgICAgICAgc206ICIuMTg3NXJlbSIsIC8qIDNweCAqLwogICAgICB9LAogICAgICBjb2xvcnM6IHsKICAgICAgICAvLyBGbGF0IC8gYmFzZSBjb2xvcnMgKHJlZ3VsYXIgYnV0dG9ucykKICAgICAgICBiYWNrZ3JvdW5kOiAiaHNsKHZhcigtLWJhY2tncm91bmQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tZm9yZWdyb3VuZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgYm9yZGVyOiAiaHNsKHZhcigtLWJvcmRlcikgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgaW5wdXQ6ICJoc2wodmFyKC0taW5wdXQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgIGNhcmQ6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tY2FyZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBmb3JlZ3JvdW5kOiAiaHNsKHZhcigtLWNhcmQtZm9yZWdyb3VuZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBib3JkZXI6ICJoc2wodmFyKC0tY2FyZC1ib3JkZXIpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgIH0sCiAgICAgICAgcG9wb3ZlcjogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1wb3BvdmVyKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tcG9wb3Zlci1mb3JlZ3JvdW5kKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGJvcmRlcjogImhzbCh2YXIoLS1wb3BvdmVyLWJvcmRlcikgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgfSwKICAgICAgICBwcmltYXJ5OiB7CiAgICAgICAgICBERUZBVUxUOiAiaHNsKHZhcigtLXByaW1hcnkpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1wcmltYXJ5LWZvcmVncm91bmQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgYm9yZGVyOiAidmFyKC0tcHJpbWFyeS1ib3JkZXIpIiwKICAgICAgICB9LAogICAgICAgIHNlY29uZGFyeTogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1zZWNvbmRhcnkpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1zZWNvbmRhcnktZm9yZWdyb3VuZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBib3JkZXI6ICJ2YXIoLS1zZWNvbmRhcnktYm9yZGVyKSIsCiAgICAgICAgfSwKICAgICAgICBtdXRlZDogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1tdXRlZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBmb3JlZ3JvdW5kOiAiaHNsKHZhcigtLW11dGVkLWZvcmVncm91bmQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgYm9yZGVyOiAidmFyKC0tbXV0ZWQtYm9yZGVyKSIsCiAgICAgICAgfSwKICAgICAgICBhY2NlbnQ6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tYWNjZW50KSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tYWNjZW50LWZvcmVncm91bmQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgYm9yZGVyOiAidmFyKC0tYWNjZW50LWJvcmRlcikiLAogICAgICAgIH0sCiAgICAgICAgZGVzdHJ1Y3RpdmU6IHsKICAgICAgICAgIERFRkFVTFQ6ICJoc2wodmFyKC0tZGVzdHJ1Y3RpdmUpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1kZXN0cnVjdGl2ZS1mb3JlZ3JvdW5kKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGJvcmRlcjogInZhcigtLWRlc3RydWN0aXZlLWJvcmRlcikiLAogICAgICAgIH0sCiAgICAgICAgcmluZzogImhzbCh2YXIoLS1yaW5nKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICBjaGFydDogewogICAgICAgICAgIjEiOiAiaHNsKHZhcigtLWNoYXJ0LTEpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgIjIiOiAiaHNsKHZhcigtLWNoYXJ0LTIpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgIjMiOiAiaHNsKHZhcigtLWNoYXJ0LTMpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgIjQiOiAiaHNsKHZhcigtLWNoYXJ0LTQpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgIjUiOiAiaHNsKHZhcigtLWNoYXJ0LTUpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgIH0sCiAgICAgICAgc2lkZWJhcjogewogICAgICAgICAgcmluZzogImhzbCh2YXIoLS1zaWRlYmFyLXJpbmcpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1zaWRlYmFyKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tc2lkZWJhci1mb3JlZ3JvdW5kKSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGJvcmRlcjogImhzbCh2YXIoLS1zaWRlYmFyLWJvcmRlcikgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgfSwKICAgICAgICAic2lkZWJhci1wcmltYXJ5IjogewogICAgICAgICAgREVGQVVMVDogImhzbCh2YXIoLS1zaWRlYmFyLXByaW1hcnkpIC8gPGFscGhhLXZhbHVlPikiLAogICAgICAgICAgZm9yZWdyb3VuZDogImhzbCh2YXIoLS1zaWRlYmFyLXByaW1hcnktZm9yZWdyb3VuZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBib3JkZXI6ICJ2YXIoLS1zaWRlYmFyLXByaW1hcnktYm9yZGVyKSIsCiAgICAgICAgfSwKICAgICAgICAic2lkZWJhci1hY2NlbnQiOiB7CiAgICAgICAgICBERUZBVUxUOiAiaHNsKHZhcigtLXNpZGViYXItYWNjZW50KSAvIDxhbHBoYS12YWx1ZT4pIiwKICAgICAgICAgIGZvcmVncm91bmQ6ICJoc2wodmFyKC0tc2lkZWJhci1hY2NlbnQtZm9yZWdyb3VuZCkgLyA8YWxwaGEtdmFsdWU+KSIsCiAgICAgICAgICBib3JkZXI6ICJ2YXIoLS1zaWRlYmFyLWFjY2VudC1ib3JkZXIpIgogICAgICAgIH0sCiAgICAgICAgc3RhdHVzOiB7CiAgICAgICAgICBvbmxpbmU6ICJyZ2IoMzQgMTk3IDk0KSIsCiAgICAgICAgICBhd2F5OiAicmdiKDI0NSAxNTggMTEpIiwKICAgICAgICAgIGJ1c3k6ICJyZ2IoMjM5IDY4IDY4KSIsCiAgICAgICAgICBvZmZsaW5lOiAicmdiKDE1NiAxNjMgMTc1KSIsCiAgICAgICAgfSwKICAgICAgfSwKICAgICAgZm9udEZhbWlseTogewogICAgICAgIHNhbnM6IFsidmFyKC0tZm9udC1zYW5zKSJdLAogICAgICAgIGRpc3BsYXk6IFsidmFyKC0tZm9udC1kaXNwbGF5KSJdLAogICAgICAgIHNlcmlmOiBbInZhcigtLWZvbnQtc2VyaWYpIl0sCiAgICAgICAgbW9ubzogWyJ2YXIoLS1mb250LW1vbm8pIl0sCiAgICAgIH0sCiAgICAgIGtleWZyYW1lczogewogICAgICAgICJhY2NvcmRpb24tZG93biI6IHsKICAgICAgICAgIGZyb206IHsgaGVpZ2h0OiAiMCIgfSwKICAgICAgICAgIHRvOiB7IGhlaWdodDogInZhcigtLXJhZGl4LWFjY29yZGlvbi1jb250ZW50LWhlaWdodCkiIH0sCiAgICAgICAgfSwKICAgICAgICAiYWNjb3JkaW9uLXVwIjogewogICAgICAgICAgZnJvbTogeyBoZWlnaHQ6ICJ2YXIoLS1yYWRpeC1hY2NvcmRpb24tY29udGVudC1oZWlnaHQpIiB9LAogICAgICAgICAgdG86IHsgaGVpZ2h0OiAiMCIgfSwKICAgICAgICB9LAogICAgICB9LAogICAgICBhbmltYXRpb246IHsKICAgICAgICAiYWNjb3JkaW9uLWRvd24iOiAiYWNjb3JkaW9uLWRvd24gMC4ycyBlYXNlLW91dCIsCiAgICAgICAgImFjY29yZGlvbi11cCI6ICJhY2NvcmRpb24tdXAgMC4ycyBlYXNlLW91dCIsCiAgICAgIH0sCiAgICB9LAogIH0sCiAgcGx1Z2luczogW3JlcXVpcmUoInRhaWx3aW5kY3NzLWFuaW1hdGUiKSwgcmVxdWlyZSgiQHRhaWx3aW5kY3NzL3R5cG9ncmFwaHkiKV0sCn0gc2F0aXNmaWVzIENvbmZpZzsK
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      borderRadius: {
+        lg: ".5625rem", /* 9px */
+        md: ".375rem", /* 6px */
+        sm: ".1875rem", /* 3px */
+      },
+      colors: {
+        // Flat / base colors (regular buttons)
+        background: "hsl(var(--background) / <alpha-value>)",
+        foreground: "hsl(var(--foreground) / <alpha-value>)",
+        border: "hsl(var(--border) / <alpha-value>)",
+        input: "hsl(var(--input) / <alpha-value>)",
+        card: {
+          DEFAULT: "hsl(var(--card) / <alpha-value>)",
+          foreground: "hsl(var(--card-foreground) / <alpha-value>)",
+          border: "hsl(var(--card-border) / <alpha-value>)",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover) / <alpha-value>)",
+          foreground: "hsl(var(--popover-foreground) / <alpha-value>)",
+          border: "hsl(var(--popover-border) / <alpha-value>)",
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
+          border: "var(--primary-border)",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
+          border: "var(--secondary-border)",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted) / <alpha-value>)",
+          foreground: "hsl(var(--muted-foreground) / <alpha-value>)",
+          border: "var(--muted-border)",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
+          border: "var(--accent-border)",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
+          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+          border: "var(--destructive-border)",
+        },
+        ring: "hsl(var(--ring) / <alpha-value>)",
+        chart: {
+          "1": "hsl(var(--chart-1) / <alpha-value>)",
+          "2": "hsl(var(--chart-2) / <alpha-value>)",
+          "3": "hsl(var(--chart-3) / <alpha-value>)",
+          "4": "hsl(var(--chart-4) / <alpha-value>)",
+          "5": "hsl(var(--chart-5) / <alpha-value>)",
+        },
+        sidebar: {
+          ring: "hsl(var(--sidebar-ring) / <alpha-value>)",
+          DEFAULT: "hsl(var(--sidebar) / <alpha-value>)",
+          foreground: "hsl(var(--sidebar-foreground) / <alpha-value>)",
+          border: "hsl(var(--sidebar-border) / <alpha-value>)",
+        },
+        "sidebar-primary": {
+          DEFAULT: "hsl(var(--sidebar-primary) / <alpha-value>)",
+          foreground: "hsl(var(--sidebar-primary-foreground) / <alpha-value>)",
+          border: "var(--sidebar-primary-border)",
+        },
+        "sidebar-accent": {
+          DEFAULT: "hsl(var(--sidebar-accent) / <alpha-value>)",
+          foreground: "hsl(var(--sidebar-accent-foreground) / <alpha-value>)",
+          border: "var(--sidebar-accent-border)"
+        },
+        status: {
+          online: "rgb(34 197 94)",
+          away: "rgb(245 158 11)",
+          busy: "rgb(239 68 68)",
+          offline: "rgb(156 163 175)",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        display: ["var(--font-display)"],
+        serif: ["var(--font-serif)"],
+        mono: ["var(--font-mono)"],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;

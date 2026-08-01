@@ -1,1 +1,39 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCB7IGN2YSB9IGZyb20gJ2NsYXNzLXZhcmlhbmNlLWF1dGhvcml0eSc7CmltcG9ydCB0eXBlIHsgVmFyaWFudFByb3BzIH0gZnJvbSAnY2xhc3MtdmFyaWFuY2UtYXV0aG9yaXR5JzsKCmltcG9ydCB7IGNuIH0gZnJvbSAiQC9saWIvdXRpbHMiCgpjb25zdCBiYWRnZVZhcmlhbnRzID0gY3ZhKAogIC8vIFdoaXRlc3BhY2Utbm93cmFwOiBCYWRnZXMgc2hvdWxkIG5ldmVyIHdyYXAuCiAgIndoaXRlc3BhY2Utbm93cmFwIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciByb3VuZGVkLW1kIGJvcmRlciBweC0yLjUgcHktMC41IHRleHQteHMgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWNvbG9ycyBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctcmluZyBmb2N1czpyaW5nLW9mZnNldC0yIiArCiAgIiBob3Zlci1lbGV2YXRlICIgLAogIHsKICAgIHZhcmlhbnRzOiB7CiAgICAgIHZhcmlhbnQ6IHsKICAgICAgICBkZWZhdWx0OgogICAgICAgICAgImJvcmRlci10cmFuc3BhcmVudCBiZy1wcmltYXJ5IHRleHQtcHJpbWFyeS1mb3JlZ3JvdW5kIHNoYWRvdy14cyIsCiAgICAgICAgc2Vjb25kYXJ5OiAiYm9yZGVyLXRyYW5zcGFyZW50IGJnLXNlY29uZGFyeSB0ZXh0LXNlY29uZGFyeS1mb3JlZ3JvdW5kIiwKICAgICAgICBkZXN0cnVjdGl2ZToKICAgICAgICAgICJib3JkZXItdHJhbnNwYXJlbnQgYmctZGVzdHJ1Y3RpdmUgdGV4dC1kZXN0cnVjdGl2ZS1mb3JlZ3JvdW5kIHNoYWRvdy14cyIsCgogICAgICAgIG91dGxpbmU6ICIgYm9yZGVyIFtib3JkZXItY29sb3I6dmFyKC0tYmFkZ2Utb3V0bGluZSldIHNoYWRvdy14cyIsCiAgICAgIH0sCiAgICB9LAogICAgZGVmYXVsdFZhcmlhbnRzOiB7CiAgICAgIHZhcmlhbnQ6ICJkZWZhdWx0IiwKICAgIH0sCiAgfSwKKQoKZXhwb3J0IGludGVyZmFjZSBCYWRnZVByb3BzCiAgZXh0ZW5kcyBSZWFjdC5IVE1MQXR0cmlidXRlczxIVE1MRGl2RWxlbWVudD4sCiAgICBWYXJpYW50UHJvcHM8dHlwZW9mIGJhZGdlVmFyaWFudHM+IHt9CgpmdW5jdGlvbiBCYWRnZSh7IGNsYXNzTmFtZSwgdmFyaWFudCwgLi4ucHJvcHMgfTogQmFkZ2VQcm9wcykgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT17Y24oYmFkZ2VWYXJpYW50cyh7IHZhcmlhbnQgfSksIGNsYXNzTmFtZSl9IHsuLi5wcm9wc30gLz4KICApOwp9CgpleHBvcnQgeyBCYWRnZSwgYmFkZ2VWYXJpYW50cyB9Cg==
+import * as React from "react"
+import { cva } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
+
+import { cn } from "@/lib/utils"
+
+const badgeVariants = cva(
+  // Whitespace-nowrap: Badges should never wrap.
+  "whitespace-nowrap inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2" +
+  " hover-elevate " ,
+  {
+    variants: {
+      variant: {
+        default:
+          "border-transparent bg-primary text-primary-foreground shadow-xs",
+        secondary: "border-transparent bg-secondary text-secondary-foreground",
+        destructive:
+          "border-transparent bg-destructive text-destructive-foreground shadow-xs",
+
+        outline: " border [border-color:var(--badge-outline)] shadow-xs",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  },
+)
+
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+  );
+}
+
+export { Badge, badgeVariants }

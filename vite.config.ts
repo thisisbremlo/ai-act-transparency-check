@@ -1,1 +1,26 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAidml0ZSI7CmltcG9ydCByZWFjdCBmcm9tICJAdml0ZWpzL3BsdWdpbi1yZWFjdCI7CmltcG9ydCBwYXRoIGZyb20gIm5vZGU6cGF0aCI7CgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoewogIHBsdWdpbnM6IFtyZWFjdCgpXSwKICByZXNvbHZlOiB7CiAgICBhbGlhczogewogICAgICAiQCI6IHBhdGgucmVzb2x2ZShpbXBvcnQubWV0YS5kaXJuYW1lLCAiY2xpZW50IiwgInNyYyIpLAogICAgICAiQHNoYXJlZCI6IHBhdGgucmVzb2x2ZShpbXBvcnQubWV0YS5kaXJuYW1lLCAic2hhcmVkIiksCiAgICAgICJAYXNzZXRzIjogcGF0aC5yZXNvbHZlKGltcG9ydC5tZXRhLmRpcm5hbWUsICJhdHRhY2hlZF9hc3NldHMiKSwKICAgIH0sCiAgfSwKICByb290OiBwYXRoLnJlc29sdmUoaW1wb3J0Lm1ldGEuZGlybmFtZSwgImNsaWVudCIpLAogIGJhc2U6ICIuLyIsCiAgYnVpbGQ6IHsKICAgIG91dERpcjogcGF0aC5yZXNvbHZlKGltcG9ydC5tZXRhLmRpcm5hbWUsICJkaXN0L3B1YmxpYyIpLAogICAgZW1wdHlPdXREaXI6IHRydWUsCiAgfSwKICBzZXJ2ZXI6IHsKICAgIGZzOiB7CiAgICAgIHN0cmljdDogdHJ1ZSwKICAgICAgZGVueTogWyIqKi8uKiJdLAogICAgfSwKICB9LAp9KTsK
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "node:path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(import.meta.dirname, "client", "src"),
+      "@shared": path.resolve(import.meta.dirname, "shared"),
+      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+    },
+  },
+  root: path.resolve(import.meta.dirname, "client"),
+  base: "./",
+  build: {
+    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    emptyOutDir: true,
+  },
+  server: {
+    fs: {
+      strict: true,
+      deny: ["**/.*"],
+    },
+  },
+});

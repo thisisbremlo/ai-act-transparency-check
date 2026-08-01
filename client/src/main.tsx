@@ -1,1 +1,9 @@
-aW1wb3J0IHsgY3JlYXRlUm9vdCB9IGZyb20gInJlYWN0LWRvbS9jbGllbnQiOwppbXBvcnQgQXBwIGZyb20gIi4vQXBwIjsKaW1wb3J0ICIuL2luZGV4LmNzcyI7CgppZiAoIXdpbmRvdy5sb2NhdGlvbi5oYXNoKSB7CiAgd2luZG93LmxvY2F0aW9uLmhhc2ggPSAiIy8iOwp9CgpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJyb290IikhKS5yZW5kZXIoPEFwcCAvPik7Cg==
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+if (!window.location.hash) {
+  window.location.hash = "#/";
+}
+
+createRoot(document.getElementById("root")!).render(<App />);

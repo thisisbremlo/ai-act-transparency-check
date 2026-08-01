@@ -1,1 +1,28 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCAqIGFzIENoZWNrYm94UHJpbWl0aXZlIGZyb20gIkByYWRpeC11aS9yZWFjdC1jaGVja2JveCIKaW1wb3J0IHsgQ2hlY2sgfSBmcm9tICJsdWNpZGUtcmVhY3QiCgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKY29uc3QgQ2hlY2tib3ggPSBSZWFjdC5mb3J3YXJkUmVmPAogIFJlYWN0LkVsZW1lbnRSZWY8dHlwZW9mIENoZWNrYm94UHJpbWl0aXZlLlJvb3Q+LAogIFJlYWN0LkNvbXBvbmVudFByb3BzV2l0aG91dFJlZjx0eXBlb2YgQ2hlY2tib3hQcmltaXRpdmUuUm9vdD4KPigoeyBjbGFzc05hbWUsIC4uLnByb3BzIH0sIHJlZikgPT4gKAogIDxDaGVja2JveFByaW1pdGl2ZS5Sb290CiAgICByZWY9e3JlZn0KICAgIGNsYXNzTmFtZT17Y24oCiAgICAgICJwZWVyIGgtNCB3LTQgc2hyaW5rLTAgcm91bmRlZC1zbSBib3JkZXIgYm9yZGVyLXByaW1hcnkgcmluZy1vZmZzZXQtYmFja2dyb3VuZCBmb2N1cy12aXNpYmxlOm91dGxpbmUtbm9uZSBmb2N1cy12aXNpYmxlOnJpbmctMiBmb2N1cy12aXNpYmxlOnJpbmctcmluZyBmb2N1cy12aXNpYmxlOnJpbmctb2Zmc2V0LTIgZGlzYWJsZWQ6Y3Vyc29yLW5vdC1hbGxvd2VkIGRpc2FibGVkOm9wYWNpdHktNTAgZGF0YS1bc3RhdGU9Y2hlY2tlZF06YmctcHJpbWFyeSBkYXRhLVtzdGF0ZT1jaGVja2VkXTp0ZXh0LXByaW1hcnktZm9yZWdyb3VuZCIsCiAgICAgIGNsYXNzTmFtZQogICAgKX0KICAgIHsuLi5wcm9wc30KICA+CiAgICA8Q2hlY2tib3hQcmltaXRpdmUuSW5kaWNhdG9yCiAgICAgIGNsYXNzTmFtZT17Y24oImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtY3VycmVudCIpfQogICAgPgogICAgICA8Q2hlY2sgY2xhc3NOYW1lPSJoLTQgdy00IiAvPgogICAgPC9DaGVja2JveFByaW1pdGl2ZS5JbmRpY2F0b3I+CiAgPC9DaGVja2JveFByaW1pdGl2ZS5Sb290PgopKQpDaGVja2JveC5kaXNwbGF5TmFtZSA9IENoZWNrYm94UHJpbWl0aXZlLlJvb3QuZGlzcGxheU5hbWUKCmV4cG9ydCB7IENoZWNrYm94IH0K
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+      className
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-current")}
+    >
+      <Check className="h-4 w-4" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
+
+export { Checkbox }

@@ -1,1 +1,32 @@
-aW1wb3J0IHsgdXNlcnMgfSBmcm9tICdAc2hhcmVkL3NjaGVtYSc7CmltcG9ydCB0eXBlIHsgVXNlciwgSW5zZXJ0VXNlciB9IGZyb20gJ0BzaGFyZWQvc2NoZW1hJzsKaW1wb3J0IHsgZHJpenpsZSB9IGZyb20gImRyaXp6bGUtb3JtL2JldHRlci1zcWxpdGUzIjsKaW1wb3J0IERhdGFiYXNlIGZyb20gImJldHRlci1zcWxpdGUzIjsKaW1wb3J0IHsgZXEgfSBmcm9tICJkcml6emxlLW9ybSI7Cgpjb25zdCBzcWxpdGUgPSBuZXcgRGF0YWJhc2UoImRhdGEuZGIiKTsKc3FsaXRlLnByYWdtYSgiam91cm5hbF9tb2RlID0gV0FMIik7CgpleHBvcnQgY29uc3QgZGIgPSBkcml6emxlKHNxbGl0ZSk7CgpleHBvcnQgaW50ZXJmYWNlIElTdG9yYWdlIHsKICBnZXRVc2VyKGlkOiBudW1iZXIpOiBQcm9taXNlPFVzZXIgfCB1bmRlZmluZWQ+OwogIGdldFVzZXJCeVVzZXJuYW1lKHVzZXJuYW1lOiBzdHJpbmcpOiBQcm9taXNlPFVzZXIgfCB1bmRlZmluZWQ+OwogIGNyZWF0ZVVzZXIodXNlcjogSW5zZXJ0VXNlcik6IFByb21pc2U8VXNlcj47Cn0KCmV4cG9ydCBjbGFzcyBEYXRhYmFzZVN0b3JhZ2UgaW1wbGVtZW50cyBJU3RvcmFnZSB7CiAgYXN5bmMgZ2V0VXNlcihpZDogbnVtYmVyKTogUHJvbWlzZTxVc2VyIHwgdW5kZWZpbmVkPiB7CiAgICByZXR1cm4gZGIuc2VsZWN0KCkuZnJvbSh1c2Vycykud2hlcmUoZXEodXNlcnMuaWQsIGlkKSkuZ2V0KCk7CiAgfQoKICBhc3luYyBnZXRVc2VyQnlVc2VybmFtZSh1c2VybmFtZTogc3RyaW5nKTogUHJvbWlzZTxVc2VyIHwgdW5kZWZpbmVkPiB7CiAgICByZXR1cm4gZGIuc2VsZWN0KCkuZnJvbSh1c2Vycykud2hlcmUoZXEodXNlcnMudXNlcm5hbWUsIHVzZXJuYW1lKSkuZ2V0KCk7CiAgfQoKICBhc3luYyBjcmVhdGVVc2VyKGluc2VydFVzZXI6IEluc2VydFVzZXIpOiBQcm9taXNlPFVzZXI+IHsKICAgIHJldHVybiBkYi5pbnNlcnQodXNlcnMpLnZhbHVlcyhpbnNlcnRVc2VyKS5yZXR1cm5pbmcoKS5nZXQoKTsKICB9Cn0KCmV4cG9ydCBjb25zdCBzdG9yYWdlID0gbmV3IERhdGFiYXNlU3RvcmFnZSgpOwo=
+import { users } from '@shared/schema';
+import type { User, InsertUser } from '@shared/schema';
+import { drizzle } from "drizzle-orm/better-sqlite3";
+import Database from "better-sqlite3";
+import { eq } from "drizzle-orm";
+
+const sqlite = new Database("data.db");
+sqlite.pragma("journal_mode = WAL");
+
+export const db = drizzle(sqlite);
+
+export interface IStorage {
+  getUser(id: number): Promise<User | undefined>;
+  getUserByUsername(username: string): Promise<User | undefined>;
+  createUser(user: InsertUser): Promise<User>;
+}
+
+export class DatabaseStorage implements IStorage {
+  async getUser(id: number): Promise<User | undefined> {
+    return db.select().from(users).where(eq(users.id, id)).get();
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    return db.select().from(users).where(eq(users.username, username)).get();
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    return db.insert(users).values(insertUser).returning().get();
+  }
+}
+
+export const storage = new DatabaseStorage();

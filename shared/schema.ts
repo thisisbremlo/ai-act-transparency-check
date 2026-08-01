@@ -1,1 +1,17 @@
-aW1wb3J0IHsgc3FsaXRlVGFibGUsIHRleHQsIGludGVnZXIgfSBmcm9tICJkcml6emxlLW9ybS9zcWxpdGUtY29yZSI7CmltcG9ydCB7IGNyZWF0ZUluc2VydFNjaGVtYSB9IGZyb20gImRyaXp6bGUtem9kIjsKaW1wb3J0IHR5cGUgKiBhcyB6IGZyb20gInpvZC9taW5pIjsKCmV4cG9ydCBjb25zdCB1c2VycyA9IHNxbGl0ZVRhYmxlKCJ1c2VycyIsIHsKICBpZDogaW50ZWdlcigiaWQiKS5wcmltYXJ5S2V5KHsgYXV0b0luY3JlbWVudDogdHJ1ZSB9KSwKICB1c2VybmFtZTogdGV4dCgidXNlcm5hbWUiKS5ub3ROdWxsKCkudW5pcXVlKCksCiAgcGFzc3dvcmQ6IHRleHQoInBhc3N3b3JkIikubm90TnVsbCgpLAp9KTsKCmV4cG9ydCBjb25zdCBpbnNlcnRVc2VyU2NoZW1hID0gY3JlYXRlSW5zZXJ0U2NoZW1hKHVzZXJzKS5waWNrKHsKICB1c2VybmFtZTogdHJ1ZSwKICBwYXNzd29yZDogdHJ1ZSwKfSk7CgpleHBvcnQgdHlwZSBJbnNlcnRVc2VyID0gei5pbmZlcjx0eXBlb2YgaW5zZXJ0VXNlclNjaGVtYT47CmV4cG9ydCB0eXBlIFVzZXIgPSB0eXBlb2YgdXNlcnMuJGluZmVyU2VsZWN0Owo=
+import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { createInsertSchema } from "drizzle-zod";
+import type * as z from "zod/mini";
+
+export const users = sqliteTable("users", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  username: text("username").notNull().unique(),
+  password: text("password").notNull(),
+});
+
+export const insertUserSchema = createInsertSchema(users).pick({
+  username: true,
+  password: true,
+});
+
+export type InsertUser = z.infer<typeof insertUserSchema>;
+export type User = typeof users.$inferSelect;

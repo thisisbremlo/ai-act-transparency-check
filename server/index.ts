@@ -1,1 +1,105 @@
-aW1wb3J0ICJkb3RlbnYvY29uZmlnIjsKaW1wb3J0IGV4cHJlc3MsIHsgUmVzcG9uc2UsIE5leHRGdW5jdGlvbiB9IGZyb20gJ2V4cHJlc3MnOwppbXBvcnQgdHlwZSB7IFJlcXVlc3QgfSBmcm9tICdleHByZXNzJzsKaW1wb3J0IHsgcmVnaXN0ZXJSb3V0ZXMgfSBmcm9tICIuL3JvdXRlcyI7CmltcG9ydCB7IHNlcnZlU3RhdGljIH0gZnJvbSAiLi9zdGF0aWMiOwppbXBvcnQgeyBjcmVhdGVTZXJ2ZXIgfSBmcm9tICJub2RlOmh0dHAiOwoKY29uc3QgYXBwID0gZXhwcmVzcygpOwpjb25zdCBodHRwU2VydmVyID0gY3JlYXRlU2VydmVyKGFwcCk7CgpkZWNsYXJlIG1vZHVsZSAiaHR0cCIgewogIGludGVyZmFjZSBJbmNvbWluZ01lc3NhZ2UgewogICAgcmF3Qm9keTogdW5rbm93bjsKICB9Cn0KCmFwcC51c2UoCiAgZXhwcmVzcy5qc29uKHsKICAgIHZlcmlmeTogKHJlcSwgX3JlcywgYnVmKSA9PiB7CiAgICAgIHJlcS5yYXdCb2R5ID0gYnVmOwogICAgfSwKICB9KSwKKTsKCmFwcC51c2UoZXhwcmVzcy51cmxlbmNvZGVkKHsgZXh0ZW5kZWQ6IGZhbHNlIH0pKTsKCmV4cG9ydCBmdW5jdGlvbiBsb2cobWVzc2FnZTogc3RyaW5nLCBzb3VyY2UgPSAiZXhwcmVzcyIpIHsKICBjb25zdCBmb3JtYXR0ZWRUaW1lID0gbmV3IERhdGUoKS50b0xvY2FsZVRpbWVTdHJpbmcoImVuLVVTIiwgewogICAgaG91cjogIm51bWVyaWMiLAogICAgbWludXRlOiAiMi1kaWdpdCIsCiAgICBzZWNvbmQ6ICIyLWRpZ2l0IiwKICAgIGhvdXIxMjogdHJ1ZSwKICB9KTsKCiAgY29uc29sZS5sb2coYCR7Zm9ybWF0dGVkVGltZX0gWyR7c291cmNlfV0gJHttZXNzYWdlfWApOwp9CgphcHAudXNlKChyZXEsIHJlcywgbmV4dCkgPT4gewogIGNvbnN0IHN0YXJ0ID0gRGF0ZS5ub3coKTsKICBjb25zdCBwYXRoID0gcmVxLnBhdGg7CiAgbGV0IGNhcHR1cmVkSnNvblJlc3BvbnNlOiBSZWNvcmQ8c3RyaW5nLCBhbnk+IHwgdW5kZWZpbmVkID0gdW5kZWZpbmVkOwoKICBjb25zdCBvcmlnaW5hbFJlc0pzb24gPSByZXMuanNvbjsKICByZXMuanNvbiA9IGZ1bmN0aW9uIChib2R5SnNvbiwgLi4uYXJncykgewogICAgY2FwdHVyZWRKc29uUmVzcG9uc2UgPSBib2R5SnNvbjsKICAgIHJldHVybiBvcmlnaW5hbFJlc0pzb24uYXBwbHkocmVzLCBbYm9keUpzb24sIC4uLmFyZ3NdKTsKICB9OwoKICByZXMub24oImZpbmlzaCIsICgpID0+IHsKICAgIGNvbnN0IGR1cmF0aW9uID0gRGF0ZS5ub3coKSAtIHN0YXJ0OwogICAgaWYgKHBhdGguc3RhcnRzV2l0aCgiL2FwaSIpKSB7CiAgICAgIGxldCBsb2dMaW5lID0gYCR7cmVxLm1ldGhvZH0gJHtwYXRofSAke3Jlcy5zdGF0dXNDb2RlfSBpbiAke2R1cmF0aW9ufW1zYDsKICAgICAgaWYgKGNhcHR1cmVkSnNvblJlc3BvbnNlKSB7CiAgICAgICAgbG9nTGluZSArPSBgIDo6ICR7SlNPTi5zdHJpbmdpZnkoY2FwdHVyZWRKc29uUmVzcG9uc2UpfWA7CiAgICAgIH0KCiAgICAgIGxvZyhsb2dMaW5lKTsKICAgIH0KICB9KTsKCiAgbmV4dCgpOwp9KTsKCihhc3luYyAoKSA9PiB7CiAgYXdhaXQgcmVnaXN0ZXJSb3V0ZXMoaHR0cFNlcnZlciwgYXBwKTsKCiAgYXBwLnVzZSgoZXJyOiBhbnksIF9yZXE6IFJlcXVlc3QsIHJlczogUmVzcG9uc2UsIG5leHQ6IE5leHRGdW5jdGlvbikgPT4gewogICAgY29uc3Qgc3RhdHVzID0gZXJyLnN0YXR1cyB8fCBlcnIuc3RhdHVzQ29kZSB8fCA1MDA7CiAgICBjb25zdCBtZXNzYWdlID0gZXJyLm1lc3NhZ2UgfHwgIkludGVybmFsIFNlcnZlciBFcnJvciI7CgogICAgY29uc29sZS5lcnJvcigiSW50ZXJuYWwgU2VydmVyIEVycm9yOiIsIGVycik7CgogICAgaWYgKHJlcy5oZWFkZXJzU2VudCkgewogICAgICByZXR1cm4gbmV4dChlcnIpOwogICAgfQoKICAgIHJldHVybiByZXMuc3RhdHVzKHN0YXR1cykuanNvbih7IG1lc3NhZ2UgfSk7CiAgfSk7CgogIC8vIGltcG9ydGFudGx5IG9ubHkgc2V0dXAgdml0ZSBpbiBkZXZlbG9wbWVudCBhbmQgYWZ0ZXIKICAvLyBzZXR0aW5nIHVwIGFsbCB0aGUgb3RoZXIgcm91dGVzIHNvIHRoZSBjYXRjaC1hbGwgcm91dGUKICAvLyBkb2Vzbid0IGludGVyZmVyZSB3aXRoIHRoZSBvdGhlciByb3V0ZXMKICBpZiAocHJvY2Vzcy5lbnYuTk9ERV9FTlYgPT09ICJwcm9kdWN0aW9uIikgewogICAgc2VydmVTdGF0aWMoYXBwKTsKICB9IGVsc2UgewogICAgY29uc3QgeyBzZXR1cFZpdGUgfSA9IGF3YWl0IGltcG9ydCgiLi92aXRlIik7CiAgICBhd2FpdCBzZXR1cFZpdGUoaHR0cFNlcnZlciwgYXBwKTsKICB9CgogIC8vIEFMV0FZUyBzZXJ2ZSB0aGUgYXBwIG9uIHRoZSBwb3J0IHNwZWNpZmllZCBpbiB0aGUgZW52aXJvbm1lbnQgdmFyaWFibGUgUE9SVAogIC8vIE90aGVyIHBvcnRzIGFyZSBmaXJld2FsbGVkLiBEZWZhdWx0IHRvIDUwMDAgaWYgbm90IHNwZWNpZmllZC4KICAvLyB0aGlzIHNlcnZlcyBib3RoIHRoZSBBUEkgYW5kIHRoZSBjbGllbnQuCiAgLy8gSXQgaXMgdGhlIG9ubHkgcG9ydCB0aGF0IGlzIG5vdCBmaXJld2FsbGVkLgogIGNvbnN0IHBvcnQgPSBwYXJzZUludChwcm9jZXNzLmVudi5QT1JUIHx8ICI1MDAwIiwgMTApOwogIGh0dHBTZXJ2ZXIubGlzdGVuKAogICAgewogICAgICBwb3J0LAogICAgICBob3N0OiAiMC4wLjAuMCIsCiAgICAgIHJldXNlUG9ydDogdHJ1ZSwKICAgIH0sCiAgICAoKSA9PiB7CiAgICAgIGxvZyhgc2VydmluZyBvbiBwb3J0ICR7cG9ydH1gKTsKICAgIH0sCiAgKTsKfSkoKTsK
+import "dotenv/config";
+import express, { Response, NextFunction } from 'express';
+import type { Request } from 'express';
+import { registerRoutes } from "./routes";
+import { serveStatic } from "./static";
+import { createServer } from "node:http";
+
+const app = express();
+const httpServer = createServer(app);
+
+declare module "http" {
+  interface IncomingMessage {
+    rawBody: unknown;
+  }
+}
+
+app.use(
+  express.json({
+    verify: (req, _res, buf) => {
+      req.rawBody = buf;
+    },
+  }),
+);
+
+app.use(express.urlencoded({ extended: false }));
+
+export function log(message: string, source = "express") {
+  const formattedTime = new Date().toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+
+  console.log(`${formattedTime} [${source}] ${message}`);
+}
+
+app.use((req, res, next) => {
+  const start = Date.now();
+  const path = req.path;
+  let capturedJsonResponse: Record<string, any> | undefined = undefined;
+
+  const originalResJson = res.json;
+  res.json = function (bodyJson, ...args) {
+    capturedJsonResponse = bodyJson;
+    return originalResJson.apply(res, [bodyJson, ...args]);
+  };
+
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    if (path.startsWith("/api")) {
+      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
+      if (capturedJsonResponse) {
+        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      }
+
+      log(logLine);
+    }
+  });
+
+  next();
+});
+
+(async () => {
+  await registerRoutes(httpServer, app);
+
+  app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
+    const status = err.status || err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
+
+    console.error("Internal Server Error:", err);
+
+    if (res.headersSent) {
+      return next(err);
+    }
+
+    return res.status(status).json({ message });
+  });
+
+  // importantly only setup vite in development and after
+  // setting up all the other routes so the catch-all route
+  // doesn't interfere with the other routes
+  if (process.env.NODE_ENV === "production") {
+    serveStatic(app);
+  } else {
+    const { setupVite } = await import("./vite");
+    await setupVite(httpServer, app);
+  }
+
+  // ALWAYS serve the app on the port specified in the environment variable PORT
+  // Other ports are firewalled. Default to 5000 if not specified.
+  // this serves both the API and the client.
+  // It is the only port that is not firewalled.
+  const port = parseInt(process.env.PORT || "5000", 10);
+  httpServer.listen(
+    {
+      port,
+      host: "0.0.0.0",
+      reusePort: true,
+    },
+    () => {
+      log(`serving on port ${port}`);
+    },
+  );
+})();

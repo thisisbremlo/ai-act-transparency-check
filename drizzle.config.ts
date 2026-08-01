@@ -1,1 +1,10 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAiZHJpenpsZS1raXQiOwoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICBvdXQ6ICIuL21pZ3JhdGlvbnMiLAogIHNjaGVtYTogIi4vc2hhcmVkL3NjaGVtYS50cyIsCiAgZGlhbGVjdDogInNxbGl0ZSIsCiAgZGJDcmVkZW50aWFsczogewogICAgdXJsOiAiLi9kYXRhLmRiIiwKICB9LAp9KTsK
+import { defineConfig } from "drizzle-kit";
+
+export default defineConfig({
+  out: "./migrations",
+  schema: "./shared/schema.ts",
+  dialect: "sqlite",
+  dbCredentials: {
+    url: "./data.db",
+  },
+});

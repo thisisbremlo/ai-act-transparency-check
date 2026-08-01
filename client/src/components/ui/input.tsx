@@ -1,1 +1,23 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCgppbXBvcnQgeyBjbiB9IGZyb20gIkAvbGliL3V0aWxzIgoKY29uc3QgSW5wdXQgPSBSZWFjdC5mb3J3YXJkUmVmPEhUTUxJbnB1dEVsZW1lbnQsIFJlYWN0LkNvbXBvbmVudFByb3BzPCJpbnB1dCI+PigKICAoeyBjbGFzc05hbWUsIHR5cGUsIC4uLnByb3BzIH0sIHJlZikgPT4gewogICAgLy8gaC05IHRvIG1hdGNoIGljb24gYnV0dG9ucyBhbmQgZGVmYXVsdCBidXR0b25zLgogICAgcmV0dXJuICgKICAgICAgPGlucHV0CiAgICAgICAgdHlwZT17dHlwZX0KICAgICAgICBjbGFzc05hbWU9e2NuKAogICAgICAgICAgImZsZXggaC05IHctZnVsbCByb3VuZGVkLW1kIGJvcmRlciBib3JkZXItaW5wdXQgYmctYmFja2dyb3VuZCBweC0zIHB5LTIgdGV4dC1iYXNlIHJpbmctb2Zmc2V0LWJhY2tncm91bmQgZmlsZTpib3JkZXItMCBmaWxlOmJnLXRyYW5zcGFyZW50IGZpbGU6dGV4dC1zbSBmaWxlOmZvbnQtbWVkaXVtIGZpbGU6dGV4dC1mb3JlZ3JvdW5kIHBsYWNlaG9sZGVyOnRleHQtbXV0ZWQtZm9yZWdyb3VuZCBmb2N1cy12aXNpYmxlOm91dGxpbmUtbm9uZSBmb2N1cy12aXNpYmxlOnJpbmctMiBmb2N1cy12aXNpYmxlOnJpbmctcmluZyBmb2N1cy12aXNpYmxlOnJpbmctb2Zmc2V0LTIgZGlzYWJsZWQ6Y3Vyc29yLW5vdC1hbGxvd2VkIGRpc2FibGVkOm9wYWNpdHktNTAgbWQ6dGV4dC1zbSIsCiAgICAgICAgICBjbGFzc05hbWUKICAgICAgICApfQogICAgICAgIHJlZj17cmVmfQogICAgICAgIHsuLi5wcm9wc30KICAgICAgLz4KICAgICkKICB9CikKSW5wdXQuZGlzcGxheU5hbWUgPSAiSW5wdXQiCgpleHBvcnQgeyBJbnB1dCB9Cg==
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
+    // h-9 to match icon buttons and default buttons.
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-9 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Input.displayName = "Input"
+
+export { Input }
