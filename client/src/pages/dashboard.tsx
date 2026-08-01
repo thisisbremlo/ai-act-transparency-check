@@ -212,6 +212,35 @@ function getStatusIcon(status: string) {
   return <AlertTriangle className="h-5 w-5 text-amber-500" />;
 }
 
+function ComplianceFaq({ t }: { t: typeof translations.en }) {
+  const questions = [
+    [t.faqArticle50Question, t.faqArticle50Answer],
+    [t.faqWhenQuestion, t.faqWhenAnswer],
+    [t.faqAdviceQuestion, t.faqAdviceAnswer],
+    [t.faqDisclosureQuestion, t.faqDisclosureAnswer],
+    [t.faqPenaltiesQuestion, t.faqPenaltiesAnswer],
+  ];
+
+  return (
+    <section className="mt-12 border-t border-border pt-8" aria-labelledby="faq-title">
+      <div className="mb-4 max-w-2xl">
+        <h2 id="faq-title" className="text-lg font-semibold">{t.faqTitle}</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{t.faqIntro}</p>
+      </div>
+      <div className="grid gap-2">
+        {questions.map(([question, answer]) => (
+          <details key={question} className="group rounded-lg border border-border bg-card/50 px-4 py-3">
+            <summary className="cursor-pointer list-none pr-6 text-sm font-medium text-foreground marker:hidden">
+              <span className="relative after:absolute after:right-0 after:content-['+'] group-open:after:content-['−']">{question}</span>
+            </summary>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function OfficialSourcesFooter({ t }: { t: typeof translations.en }) {
   const sources = [
     {
@@ -533,6 +562,7 @@ export default function DashboardPage() {
           </div>
 
           <p className="mt-6 text-center text-xs text-muted-foreground">{t.disclaimer}</p>
+          <ComplianceFaq t={t} />
           <OfficialSourcesFooter t={t} />
         </main>
       </div>
@@ -640,6 +670,7 @@ export default function DashboardPage() {
             {step === 0 && answers.usageContext === "private" ? t.showResult : t.next}
           </Button>
         </div>
+        <ComplianceFaq t={t} />
         <OfficialSourcesFooter t={t} />
       </main>
     </div>

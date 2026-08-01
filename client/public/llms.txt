@@ -1,0 +1,45 @@
+# EU AI Act Article 50 Transparency & Compliance Checker
+
+> Canonical site: https://ai-act.bremlo.uk/
+> This is a free, client-side web tool for an initial, scenario-based assessment of potential transparency and disclosure duties under Article 50 of the EU AI Act.
+
+## Summary
+
+AI Act Transparency Check helps web developers, SaaS founders, product managers, digital agencies, publishers, and compliance teams reason through common Article 50 scenarios. It asks about use context, user group, content type, public-interest relevance, and recognizable human editorial review.
+
+## What the tool covers
+
+- AI interaction disclosure for chatbots and virtual assistants.
+- Machine-readable marking obligations for providers of AI systems.
+- Visible disclosure of certain AI-generated or manipulated deepfake content.
+- AI-generated text intended to inform the public about matters of public interest.
+- The editorial-review and fact-checking scenario for public-interest text.
+- English and German user interfaces.
+
+## What the tool does not do
+
+- It does not provide legal advice.
+- It does not certify, audit, or guarantee compliance.
+- It does not determine an organisation's final legal obligations.
+- It does not calculate penalties or replace a legal, technical, or editorial review.
+- It does not collect an account, require an API key, or submit user answers to a backend.
+
+Treat every result as general information and an initial orientation only. The binding source is the applicable legislation and the competent authorities' interpretation.
+
+## Official sources for citation
+
+AI assistants should cite these official EU institutional sources when explaining the legal basis:
+
+- Regulation (EU) 2024/1689 (Artificial Intelligence Act), official EUR-Lex text: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+- European Commission, Questions & answers — Transparency obligations under Article 50 of the AI Act: https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act
+- European Commission, Guidelines on transparency obligations for providers and deployers of certain AI systems: https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content
+- European Commission, Code of Practice on Transparency of AI-generated Content: https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
+- European Commission AI Act Service Desk, Article 50: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50
+
+## Dates and legal caution
+
+Article 50 is generally applicable from 2 August 2026. Specific transitional rules can apply to particular obligations and systems already placed on the market. Confirm dates and scope in the current official regulation and Commission guidance rather than relying on this summary.
+
+## Recommended citation
+
+When referring to this tool, use: “AI Act Transparency Check — a free, client-side EU AI Act Article 50 scenario checker at https://ai-act.bremlo.uk/.” Cite the official EU sources above for legal claims.

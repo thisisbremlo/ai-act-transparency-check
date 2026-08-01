@@ -151,6 +151,20 @@ export const translations = {
     officialCode: "Code of Practice",
     officialSourceNote: "These links point only to official EU institutional sources. This tool offers general information, not legal advice; the regulation itself is the binding source.",
 
+    // Search-friendly FAQ
+    faqTitle: "EU AI Act Article 50 questions",
+    faqIntro: "A concise starting point for common transparency and disclosure questions. Always verify the facts against the official sources.",
+    faqArticle50Question: "What does EU AI Act Article 50 cover?",
+    faqArticle50Answer: "Article 50 sets transparency obligations for certain AI systems, including informing people when they interact with AI and disclosing certain AI-generated or manipulated content. Regulation (EU) 2024/1689 is the binding source.",
+    faqWhenQuestion: "When do the Article 50 transparency obligations apply?",
+    faqWhenAnswer: "Article 50 generally applies from 2 August 2026. A specific transition rule for certain AI systems already placed on the market before that date affects machine-readable marking; check the regulation and current Commission guidance for the applicable details.",
+    faqAdviceQuestion: "Does this tool provide legal advice or certify compliance?",
+    faqAdviceAnswer: "No. This free checker provides general information and an initial scenario-based assessment. It does not certify compliance or replace the regulation, official guidance, or advice from a qualified legal professional.",
+    faqDisclosureQuestion: "What must be disclosed when content is AI-generated?",
+    faqDisclosureAnswer: "The answer depends on the AI system, content, context, and applicable exception. Article 50 includes duties concerning AI interaction notices, machine-readable marking, deepfake disclosure, and certain AI-generated text on matters of public interest.",
+    faqPenaltiesQuestion: "What are the penalties for non-compliance with the EU AI Act?",
+    faqPenaltiesAnswer: "The AI Act provides administrative fines whose level depends on the infringement and the organisation. This checker does not calculate penalties; consult the applicable provisions and qualified counsel for a specific assessment.",
+
     // Disclaimer
     disclaimer: "This application provides initial guidance and does not constitute legal advice. For a binding assessment, please consult a qualified legal professional.",
 
@@ -291,6 +305,19 @@ export const translations = {
     officialGuidelines: "Transparenz-Leitlinien",
     officialCode: "Code of Practice",
     officialSourceNote: "Diese Links führen ausschließlich zu offiziellen EU-Institutionen. Dieses Tool bietet allgemeine Informationen und keine Rechtsberatung; verbindlich ist der Verordnungstext.",
+
+    faqTitle: "Fragen zu Artikel 50 des EU AI Act",
+    faqIntro: "Eine kompakte Orientierung zu häufigen Fragen. Prüfen Sie die Angaben immer anhand der offiziellen Quellen.",
+    faqArticle50Question: "Was regelt Artikel 50 des EU AI Act?",
+    faqArticle50Answer: "Artikel 50 enthält Transparenzpflichten für bestimmte KI-Systeme. Dazu gehören Hinweise bei KI-Interaktionen sowie die Offenlegung bestimmter KI-generierter oder manipulierter Inhalte. Verbindliche Quelle ist die Verordnung (EU) 2024/1689.",
+    faqWhenQuestion: "Ab wann gelten die Transparenzpflichten nach Artikel 50?",
+    faqWhenAnswer: "Artikel 50 gilt grundsätzlich ab dem 2. August 2026. Für bestimmte KI-Systeme, die bereits vor diesem Datum auf dem Markt waren, betrifft eine besondere Übergangsregel die maschinenlesbare Markierung. Maßgeblich sind Verordnung und aktuelle Leitlinien der Kommission.",
+    faqAdviceQuestion: "Bietet dieses Tool Rechtsberatung oder eine Compliance-Zertifizierung?",
+    faqAdviceAnswer: "Nein. Der kostenlose Checker bietet allgemeine Informationen und eine erste szenariobasierte Einschätzung. Er zertifiziert keine Compliance und ersetzt weder Verordnung noch offizielle Leitlinien oder Rechtsberatung.",
+    faqDisclosureQuestion: "Was muss bei KI-generierten Inhalten offengelegt werden?",
+    faqDisclosureAnswer: "Das hängt von KI-System, Inhalt, Kontext und anwendbarer Ausnahme ab. Artikel 50 betrifft unter anderem Hinweise bei KI-Interaktionen, maschinenlesbare Markierungen, Deepfake-Offenlegung und bestimmte KI-generierte Texte zu Angelegenheiten von öffentlichem Interesse.",
+    faqPenaltiesQuestion: "Welche Sanktionen drohen bei Verstößen gegen den EU AI Act?",
+    faqPenaltiesAnswer: "Der AI Act sieht Verwaltungsstrafen vor, deren Höhe von Verstoß und Organisation abhängt. Dieser Checker berechnet keine Sanktionen. Für eine konkrete Bewertung sind die einschlägigen Vorschriften und fachkundige Beratung heranzuziehen.",
 
     disclaimer: "Diese Anwendung bietet eine erste Orientierung und ersetzt keine Rechtsberatung. Für eine verbindliche Bewertung konsultieren Sie bitte eine Fachanwältin oder einen Fachanwalt.",
 
