@@ -9,7 +9,7 @@ import {
   FileText, ImageIcon, Mic, Video,
   Building2, Newspaper, Landmark, User,
   Bot, Eye, Cpu, CheckCircle2, XCircle,
-  ArrowLeft, RotateCcw, Info, Clock, Scale, Sparkles, Languages,
+  ArrowLeft, RotateCcw, Info, Clock, Scale, Sparkles, Languages, ExternalLink,
 } from "lucide-react";
 import { translations, detectLang, type Lang } from "@/i18n";
 
@@ -210,6 +210,65 @@ function getStatusIcon(status: string) {
   if (status === "required") return <ShieldAlert className="h-5 w-5 text-destructive" />;
   if (status === "not_required") return <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-500" />;
   return <AlertTriangle className="h-5 w-5 text-amber-500" />;
+}
+
+function OfficialSourcesFooter({ t }: { t: typeof translations.en }) {
+  const sources = [
+    {
+      label: t.officialRegulation,
+      href: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      detail: "EUR-Lex · Regulation (EU) 2024/1689",
+    },
+    {
+      label: t.officialArticle50,
+      href: "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+      detail: "European Commission · Article 50 FAQ",
+    },
+    {
+      label: t.officialGuidelines,
+      href: "https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content",
+      detail: "European Commission · Implementation guidance",
+    },
+    {
+      label: t.officialCode,
+      href: "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content",
+      detail: "European Commission · Code of Practice",
+    },
+  ];
+
+  return (
+    <footer className="mt-12 border-t border-border pt-8" aria-labelledby="official-sources-title">
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+        <div className="max-w-sm">
+          <div className="mb-2 flex items-center gap-2 text-sm font-semibold" id="official-sources-title">
+            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary">
+              <Scale className="h-3.5 w-3.5 text-primary-foreground" />
+            </div>
+            {t.officialDocsTitle}
+          </div>
+          <p className="text-xs leading-relaxed text-muted-foreground">{t.officialDocsIntro}</p>
+        </div>
+        <div className="grid w-full gap-2 sm:max-w-xl sm:grid-cols-2">
+          {sources.map((source) => (
+            <a
+              key={source.href}
+              href={source.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-lg border border-border bg-card/50 p-3 transition-colors hover:border-primary/40 hover:bg-muted/50"
+            >
+              <span className="flex items-start justify-between gap-3 text-sm font-medium text-foreground">
+                {source.label}
+                <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+              </span>
+              <span className="mt-1 block text-[11px] text-muted-foreground">{source.detail}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <p className="mt-6 text-[11px] leading-relaxed text-muted-foreground">{t.officialSourceNote}</p>
+    </footer>
+  );
 }
 
 function LevelIcon({ level }: { level: string }) {
@@ -453,8 +512,8 @@ export default function DashboardPage() {
                     <h3 className="text-sm font-semibold">{t.legalTitle}</h3>
                     <p className="mt-1 text-xs text-muted-foreground">{t.legalBody}</p>
                     <div className="mt-3 flex flex-wrap gap-3 text-xs">
-                      <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">{t.linkArt50}</a>
-                      <a href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">{t.linkGuidelines}</a>
+                      <a href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">{t.linkArt50}</a>
+                      <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">{t.linkGuidelines}</a>
                       <a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">{t.linkCode}</a>
                     </div>
                   </div>
@@ -474,6 +533,7 @@ export default function DashboardPage() {
           </div>
 
           <p className="mt-6 text-center text-xs text-muted-foreground">{t.disclaimer}</p>
+          <OfficialSourcesFooter t={t} />
         </main>
       </div>
     );
@@ -580,6 +640,7 @@ export default function DashboardPage() {
             {step === 0 && answers.usageContext === "private" ? t.showResult : t.next}
           </Button>
         </div>
+        <OfficialSourcesFooter t={t} />
       </main>
     </div>
   );

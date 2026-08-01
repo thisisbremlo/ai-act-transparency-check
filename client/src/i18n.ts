@@ -140,9 +140,16 @@ export const translations = {
     // Legal
     legalTitle: "Legal framework",
     legalBody: "This dashboard is based on Article 50 of Regulation (EU) 2024/1689 (AI Act), the final guidelines of the European Commission from July 20, 2026, and the Code of Practice on Transparency of AI-Generated Content from June 10, 2026. The guidelines are legally non-binding; only the obligations under the AI Act are binding. The Court of Justice of the European Union (CJEU) provides the ultimately authoritative interpretation.",
-    linkArt50: "Art. 50 AI Act (full text)",
-    linkGuidelines: "EU Commission guidelines",
+    linkArt50: "Article 50 FAQ",
+    linkGuidelines: "Commission guidelines",
     linkCode: "Code of Practice",
+    officialDocsTitle: "Official EU documents",
+    officialDocsIntro: "Read the binding regulation and the European Commission’s official implementation resources.",
+    officialRegulation: "EU AI Act · Regulation text",
+    officialArticle50: "Article 50 · Transparency FAQ",
+    officialGuidelines: "Transparency guidelines",
+    officialCode: "Code of Practice",
+    officialSourceNote: "These links point only to official EU institutional sources. This tool offers general information, not legal advice; the regulation itself is the binding source.",
 
     // Disclaimer
     disclaimer: "This application provides initial guidance and does not constitute legal advice. For a binding assessment, please consult a qualified legal professional.",
@@ -274,9 +281,16 @@ export const translations = {
 
     legalTitle: "Rechtlicher Rahmen",
     legalBody: "Dieses Dashboard basiert auf Artikel 50 der Verordnung (EU) 2024/1689 (AI Act), den finalen Leitlinien der EU-Kommission vom 20. Juli 2026 sowie dem Code of Practice on Transparency of AI-Generated Content vom 10. Juni 2026. Die Leitlinien sind rechtlich unverbindlich; verbindlich sind allein die Pflichten aus dem AI Act. Letztverbindlich interpretiert nur der Europäische Gerichtshof (EuGH).",
-    linkArt50: "Art. 50 AI Act (Volltext)",
-    linkGuidelines: "Leitlinien der EU-Kommission",
+    linkArt50: "FAQ zu Artikel 50",
+    linkGuidelines: "Leitlinien der Kommission",
     linkCode: "Code of Practice",
+    officialDocsTitle: "Offizielle EU-Dokumente",
+    officialDocsIntro: "Lesen Sie den verbindlichen Gesetzestext und die offiziellen Umsetzungshilfen der Europäischen Kommission.",
+    officialRegulation: "EU AI Act · Verordnungstext",
+    officialArticle50: "Artikel 50 · Transparenz-FAQ",
+    officialGuidelines: "Transparenz-Leitlinien",
+    officialCode: "Code of Practice",
+    officialSourceNote: "Diese Links führen ausschließlich zu offiziellen EU-Institutionen. Dieses Tool bietet allgemeine Informationen und keine Rechtsberatung; verbindlich ist der Verordnungstext.",
 
     disclaimer: "Diese Anwendung bietet eine erste Orientierung und ersetzt keine Rechtsberatung. Für eine verbindliche Bewertung konsultieren Sie bitte eine Fachanwältin oder einen Fachanwalt.",
 

@@ -1,55 +1,61 @@
 # AI Act Transparency Check
 
-Interactive dashboard that helps users determine whether they need to label AI-generated content under **Article 50 of the EU AI Act** (Regulation (EU) 2024/1689).
+A focused, bilingual decision tool for understanding when **Article 50 of the EU AI Act** may require disclosure or labelling of AI-generated content.
 
-Built with React, TypeScript, Tailwind CSS, and shadcn/ui. Bilingual (English/German) with automatic browser language detection.
+> This application provides general information, not legal advice. For a binding assessment, consult a qualified legal professional and use the regulation itself as the authoritative source.
 
-## Features
+## What it does
 
-- **5-step decision wizard** — guides users through the key criteria:
-  1. Context of use (private vs. professional/public)
-  2. User group (individuals, media, authorities, companies)
-  3. Content type (text, image, audio, video, deepfake, chatbot)
-  4. Public interest relevance (for text content)
-  5. Editorial review (for public interest text)
-- **Article 50 compliance logic** covering:
-  - Art. 50(1) — AI interaction disclosure (chatbots)
-  - Art. 50(2) — Machine-readable marking (provider obligation)
-  - Art. 50(4) — Deepfake labeling
-  - Art. 50(4) — AI-generated text on public interest matters
-  - Editorial review exemption with fact-checking requirement
-- **User group matrix** showing technical marking and visible labeling requirements for each group
-- **Bilingual** — English and German, auto-detected from browser language with manual toggle
-- **Dark mode** with system preference detection
-- **Fully responsive** — desktop, tablet, and mobile
-- **Accessible** — semantic HTML, keyboard navigation, ARIA labels
+The app turns the main Article 50 decision points into a short, guided check. It considers:
 
-## Legal Basis
+- whether the use is private or professional/public;
+- the user group involved;
+- the type of AI content, including text, images, audio, video, deepfakes, and chatbots;
+- whether text concerns a matter of public interest; and
+- whether recognizable human editorial review and fact-checking took place.
 
-- [Article 50, EU AI Act](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50)
-- [EU Commission Guidelines on Transparency Obligations](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems) (July 20, 2026)
-- [Code of Practice on Transparency of AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content) (June 10, 2026)
+At the end, it explains the relevant obligations, technical marking expectations, visible labelling requirements, exceptions, and user-group differences.
 
-**Disclaimer:** This dashboard provides initial guidance and does not constitute legal advice. For a binding assessment, consult a qualified legal professional. The guidelines are legally non-binding; only the obligations under the AI Act are binding. The Court of Justice of the European Union (CJEU) provides the ultimately authoritative interpretation.
+## Highlights
 
-## Tech Stack
+- **Bilingual interface:** English and German, with browser-language detection and a manual toggle.
+- **Guided workflow:** A responsive step-by-step check that adapts to the selected content type.
+- **Article 50 coverage:** Interaction disclosure, machine-readable marking, deepfake disclosure, and public-interest text.
+- **Practical result view:** Clear status, obligation cards, notes, exceptions, and a user-group matrix.
+- **Responsive and accessible:** Keyboard-friendly controls, semantic markup, ARIA-friendly UI components, and mobile layouts.
+- **Static deployment:** No account, database, API key, or runtime environment variable is required.
 
-| Layer       | Technology                                    |
-| ----------- | --------------------------------------------- |
-| Frontend    | React 18, TypeScript, Vite                    |
-| Styling     | Tailwind CSS v3, shadcn/ui                    |
-| Backend     | Express.js                                    |
-| Database    | SQLite (Drizzle ORM)                          |
-| Fonts       | Satoshi + Cabinet Grotesk (Fontshare)         |
+## Official EU sources
 
-## Getting Started
+The app links only to official European Union institutional sources:
 
-### Prerequisites
+- [Regulation (EU) 2024/1689 — official EUR-Lex text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng)
+- [Transparency obligations under Article 50 — European Commission FAQ](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act)
+- [Guidelines on transparency obligations — European Commission](https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content)
+- [Code of Practice on Transparency of AI-generated Content — European Commission](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)
 
-- Node.js 20.19+ (or 22.12+)
-- npm (or pnpm)
+The regulation is legally binding. Commission guidance and the Code of Practice help explain implementation but do not replace the regulation.
 
-### Installation
+## Tech stack
+
+| Area | Technology |
+| --- | --- |
+| UI | React 18, TypeScript, Vite 7 |
+| Styling | Tailwind CSS 3, shadcn/ui patterns |
+| Components | Radix UI primitives, Lucide icons |
+| Routing | Wouter with hash-based navigation |
+| Hosting | Static Vite output, compatible with Vercel |
+
+The repository also contains a small Express/Drizzle scaffold from the original project template. The published website is the client-only Vite build and does not require that server or its SQLite database.
+
+## Run locally
+
+### Requirements
+
+- Node.js `20.19+` or `22.12+`
+- npm
+
+### Install
 
 ```bash
 git clone https://github.com/thisisbremlo/ai-act-transparency-check.git
@@ -57,70 +63,58 @@ cd ai-act-transparency-check
 npm install
 ```
 
-### Development
+### Start development
 
 ```bash
 npm run dev
 ```
 
-The dev server starts on `http://localhost:5000` (override with the `PORT` environment variable).
+Vite serves the app on `http://localhost:5000`. Set `PORT` to use another port.
 
-### Production Build
+### Build and preview production output
 
 ```bash
 npm run build
 npm run start
 ```
 
-The build compiles the Vite client into `dist/`, including the production `index.html` and browser assets. `npm run start` serves that static build locally with Vite Preview.
+The build writes a standard static website to `dist/`, including `dist/index.html` and browser assets. `npm run start` serves that output with Vite Preview.
 
-### Deploy to Vercel
+### Typecheck
 
-This is a client-side React website and deploys as a normal static Vite site. Vercel should use:
+```bash
+npm run check
+```
 
+## Deploy to Vercel
+
+This is a normal static Vite website. Vercel should use:
+
+- **Framework preset:** Vite
+- **Install command:** `npm install`
 - **Build command:** `npm run build`
 - **Output directory:** `dist`
-- **Install command:** `npm install`
 
-The repository includes `vercel.json` with the static output and SPA fallback already configured. No server, database, API key, or environment variable is required for the dashboard.
+These settings are already described in `vercel.json`, including a fallback for the client-side route. No server process, database, API key, or environment variable is needed.
 
-## Key Dates
+## Project structure
 
-| Date                | Milestone                                                                |
-| ------------------- | ------------------------------------------------------------------------ |
-| August 2, 2026      | Transparency obligations under Art. 50 AI Act take effect                 |
-| December 2, 2026    | Transition period for systems already on the market before Aug 2, 2026   |
+```text
+client/
+├── index.html              # Vite document shell
+└── src/
+    ├── components/ui/      # Reusable shadcn/ui components
+    ├── hooks/              # Client hooks
+    ├── lib/                # Client utilities
+    ├── pages/dashboard.tsx # Decision wizard and results
+    ├── i18n.ts             # English/German copy
+    ├── App.tsx             # App shell and routing
+    └── index.css           # Theme tokens and global styles
 
-## Project Structure
-
-```
-ai-act-transparency-check/
-├── client/                  # Frontend
-│   ├── src/
-│   │   ├── pages/           # Page components (dashboard.tsx, not-found.tsx)
-│   │   ├── components/ui/   # shadcn/ui components
-│   │   ├── hooks/           # Custom hooks
-│   │   ├── lib/             # Utilities and query client
-│   │   ├── i18n.ts          # Translations (EN/DE) + language detection
-│   │   ├── App.tsx          # Root app with routing
-│   │   ├── main.tsx         # Entry point
-│   │   └── index.css        # Global styles + theme tokens
-│   └── index.html           # HTML template
-├── server/                  # Backend
-│   ├── index.ts             # Express server setup
-│   ├── routes.ts            # API routes
-│   ├── storage.ts           # Storage interface
-│   ├── static.ts            # Static file serving
-│   └── vite.ts              # Vite middleware
-├── shared/                  # Shared types/schema
-├── script/                  # Build scripts
-├── package.json
-├── vite.config.ts
-├── tailwind.config.ts
-├── postcss.config.js
-├── drizzle.config.ts
-├── components.json
-└── tsconfig.json
+shared/                     # Shared schema types from the original scaffold
+vercel.json                 # Static Vercel deployment configuration
+vite.config.ts              # Vite client configuration
+package.json                # Scripts and dependencies
 ```
 
 ## License
