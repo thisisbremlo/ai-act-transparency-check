@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, Languages, Scale } from "lucide-react";
+import { ArrowLeft, Languages } from "lucide-react";
 import { detectLang, type Lang } from "@/i18n";
 
 type LegalSection = "legal" | "privacy" | "disclaimer";
@@ -144,9 +144,11 @@ function PageShell({
       <header className="border-b border-border bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center gap-2.5 text-sm font-bold tracking-tight text-foreground">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-              <Scale className="h-4 w-4 text-primary-foreground" />
-            </span>
+            <img
+              src="/ai-act.bremlo.uk-logo.svg"
+              alt=""
+              className="h-8 w-auto shrink-0 rounded-md bg-white p-1"
+            />
             AI Act Check
           </Link>
           <button

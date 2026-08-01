@@ -272,9 +272,11 @@ function OfficialSourcesFooter({ t }: { t: typeof translations.en }) {
       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
         <div className="max-w-sm">
           <div className="mb-2 flex items-center gap-2 text-sm font-semibold" id="official-sources-title">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary">
-              <Scale className="h-3.5 w-3.5 text-primary-foreground" />
-            </div>
+            <img
+              src="/ai-act.bremlo.uk-logo.svg"
+              alt=""
+              className="h-7 w-auto shrink-0 rounded-md bg-white p-1"
+            />
             {t.officialDocsTitle}
           </div>
           <p className="text-xs leading-relaxed text-muted-foreground">{t.officialDocsIntro}</p>
@@ -393,9 +395,11 @@ export default function DashboardPage() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-            <Scale className="h-4 w-4 text-primary-foreground" />
-          </div>
+          <img
+            src="/ai-act.bremlo.uk-logo.svg"
+            alt=""
+            className="h-8 w-auto shrink-0 rounded-md bg-white p-1"
+          />
           <div>
             <span className="text-sm font-bold tracking-tight">{t.appName}</span>
             <span className="ml-2 hidden text-xs text-muted-foreground sm:inline">{t.appSubtitle}</span>
