@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, Languages, Scale } from "lucide-react";
 import { detectLang, type Lang } from "@/i18n";
@@ -263,6 +263,10 @@ function Disclaimer({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => vo
 
 export default function LegalPage({ section }: { section: LegalSection }) {
   const [lang, setLang] = useState<Lang>(() => detectLang());
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [section]);
   if (section === "privacy") return <PrivacyPolicy lang={lang} setLang={setLang} />;
   if (section === "disclaimer") return <Disclaimer lang={lang} setLang={setLang} />;
   return <LegalNotice lang={lang} setLang={setLang} />;
