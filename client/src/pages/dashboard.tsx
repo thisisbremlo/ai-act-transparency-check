@@ -10,7 +10,7 @@ import {
   FileText, ImageIcon, Mic, Video,
   Building2, Newspaper, Landmark, User,
   Bot, Eye, Cpu, CheckCircle2, XCircle,
-  ArrowLeft, RotateCcw, Info, Clock, Scale, Sparkles, Languages, ExternalLink,
+  ArrowLeft, RotateCcw, Info, Clock, Scale, Sparkles, Languages, ExternalLink, ChevronDown,
 } from "lucide-react";
 import { translations, detectLang, type Lang } from "@/i18n";
 
@@ -231,8 +231,9 @@ function ComplianceFaq({ t }: { t: typeof translations.en }) {
       <div className="grid gap-2">
         {questions.map(([question, answer]) => (
           <details key={question} className="group rounded-lg border border-border bg-card/50 px-4 py-3">
-            <summary className="cursor-pointer list-none pr-6 text-sm font-medium text-foreground marker:hidden">
-              <span className="relative after:absolute after:right-0 after:content-['+'] group-open:after:content-['−']">{question}</span>
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-foreground marker:hidden">
+              <span>{question}</span>
+              <ChevronDown aria-hidden="true" className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
             </summary>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{answer}</p>
           </details>
